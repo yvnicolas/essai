@@ -5,55 +5,30 @@ package com.dynamease.ldapBas;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ldap.NamingException;
 import org.springframework.ldap.core.ContextMapper;
 import org.springframework.ldap.core.DirContextAdapter;
 import org.springframework.ldap.core.LdapTemplate;
-import org.springframework.ldap.core.support.AbstractContextSource;
-import org.springframework.ldap.core.support.DirContextSource;
+import org.springframework.stereotype.Component;
 
 /**
  * @author yves
  * 
  */
+@Component
 public class DyniAnnuaireService implements DyniAnnuaireInterface {
 
-
-private AbstractContextSource ldapCtxt = null;;
-
+@Autowired
 private LdapTemplate ldapTemplate = null;
 
-private static final String base = "dc=dynamease, dc=net";
-private static final String bindUser = "uid=admin,ou=system";
-private static final String bindpwd = "secret";
-private static final String defaultUrl = "ldap://localhost:10389";
-
-
-
-// Initialisation context source
-
-private void initCtxt(String url) {
-	ldapCtxt = new DirContextSource();
-	ldapCtxt.setBase(base);
-	ldapCtxt.setUserDn(bindUser);
-	ldapCtxt.setPassword(bindpwd);
-	ldapCtxt.setUrl(url);
-	ldapTemplate = new LdapTemplate(ldapCtxt);
-	
-}
 
 
 
 	public DyniAnnuaireService() {
 	super();
-	initCtxt(defaultUrl);
 	}
 
-	
-	public DyniAnnuaireService(String url) {
-	super();
-	initCtxt(url);
-	}
 
 	private static final Logger logger = LoggerFactory
 			.getLogger(DyniAnnuaireService.class);

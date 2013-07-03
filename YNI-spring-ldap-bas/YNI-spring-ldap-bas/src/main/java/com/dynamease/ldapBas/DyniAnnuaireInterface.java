@@ -7,6 +7,7 @@ package com.dynamease.ldapBas;
  * @author yves
  *
  */
+
 public interface DyniAnnuaireInterface {
 	
 	/**Tells whether a person has subscribed to Dynamease
