@@ -29,16 +29,12 @@ public class App {
 	
 		void start(){
 		Scanner sc = new Scanner(System.in);
-		// String url ="ldap://192.168.1.10:";
 		String prenom = "";
 		String nom = "";
 		String encore = "";
 
 		System.out.println("Salut les aminches!");
-		// System.out.println("Port?");
-		// url = url + sc.nextLine();
-		// dyniAnnuaireService = new DyniAnnuaireService(url);
-		//
+
 		do {
 			System.out.print("prenom?");
 			prenom = sc.nextLine();
