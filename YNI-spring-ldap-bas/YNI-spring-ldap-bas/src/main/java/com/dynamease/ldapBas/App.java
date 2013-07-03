@@ -3,9 +3,7 @@ package com.dynamease.ldapBas;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,18 +14,17 @@ import org.springframework.stereotype.Service;
 public class App {
 
 	@Autowired
-	private static DyniAnnuaireService dyniAnnuaireService;
+	private DyniAnnuaireService dyniAnnuaireService;
 
 	public static void main(String[] args) {
 
-		@SuppressWarnings("resource")
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("file:src/main/resources/ldapbascontext.xml");
 		App App = context.getBean(App.class);
 		App.start();
-	
+
 	}
-	
-		void start(){
+
+	void start() {
 		Scanner sc = new Scanner(System.in);
 		String prenom = "";
 		String nom = "";

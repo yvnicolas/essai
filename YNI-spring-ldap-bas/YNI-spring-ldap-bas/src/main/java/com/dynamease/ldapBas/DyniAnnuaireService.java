@@ -10,7 +10,6 @@ import org.springframework.ldap.NamingException;
 import org.springframework.ldap.core.ContextMapper;
 import org.springframework.ldap.core.DirContextAdapter;
 import org.springframework.ldap.core.LdapTemplate;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,19 +19,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class DyniAnnuaireService implements DyniAnnuaireInterface {
 
-@Autowired
-private LdapTemplate ldapTemplate = null;
-
-
-
+	@Autowired
+	private LdapTemplate ldapTemplate;
 
 	public DyniAnnuaireService() {
-	super();
+		super();
 	}
 
-
-	private static final Logger logger = LoggerFactory
-			.getLogger(DyniAnnuaireService.class);
+	private static final Logger logger = LoggerFactory.getLogger(DyniAnnuaireService.class);
 
 	/*
 	 * (non-Javadoc)
@@ -44,11 +38,9 @@ private LdapTemplate ldapTemplate = null;
 	@Override
 	public boolean existsAsSubscriber(DyniPerson person) {
 		try {
-			DyniPerson result = (DyniPerson) ldapTemplate.lookup(
-					constructSubscriberDN(person), new PersonContextMapper());
+			DyniPerson result = (DyniPerson) ldapTemplate.lookup(constructSubscriberDN(person), new PersonContextMapper());
 			if (result == null) {
-				logger.debug(String
-						.format(">>> retour result null du lookup mais sans exception"));
+				logger.debug(String.format(">>> retour result null du lookup mais sans exception"));
 				return false;
 			} else
 				return true;
@@ -59,9 +51,7 @@ private LdapTemplate ldapTemplate = null;
 		// TODO In that case the naming exception should not be caught but
 		// throwed upwards.
 		catch (NamingException e) {
-			logger.info(String.format(
-					"LDAP exception raised in existsAsSubscriber : %s",
-					e.getMessage()));
+			logger.info(String.format("LDAP exception raised in existsAsSubscriber : %s", e.getMessage()));
 			return false;
 		}
 

@@ -23,9 +23,9 @@
 		<constructor-arg ref="contextSource" />
 	</bean>
 
-	<bean id="dyniAnnuaireService" class="com.dynamease.ldapBas.DyniAnnuaireService ">
-		<property name="ldapTemplate" ref="ldapTemplate" />
-	</bean>
+<!-- 	<bean id="dyniAnnuaireService" class="com.dynamease.ldapBas.DyniAnnuaireService "> -->
+<!-- 		<property name="ldapTemplate" ref="ldapTemplate" /> -->
+<!-- 	</bean> -->
 
 
 </beans>
