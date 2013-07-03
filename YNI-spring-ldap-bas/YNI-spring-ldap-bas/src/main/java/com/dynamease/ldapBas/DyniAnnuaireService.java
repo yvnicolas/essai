@@ -11,12 +11,13 @@ import org.springframework.ldap.core.ContextMapper;
 import org.springframework.ldap.core.DirContextAdapter;
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * @author yves
  * 
  */
-@Component
+@Service
 public class DyniAnnuaireService implements DyniAnnuaireInterface {
 
 @Autowired

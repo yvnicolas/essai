@@ -3,21 +3,31 @@ package com.dynamease.ldapBas;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * Hello world!
  * 
  */
+@Service
 public class App {
 
 	@Autowired
 	private static DyniAnnuaireService dyniAnnuaireService;
 
-	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 
-		new ClassPathXmlApplicationContext("classpath:ldapbascontext.xml");
+		@SuppressWarnings("resource")
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("file:src/main/resources/ldapbascontext.xml");
+		App App = context.getBean(App.class);
+		App.start();
+	
+	}
+	
+		void start(){
 		Scanner sc = new Scanner(System.in);
 		// String url ="ldap://192.168.1.10:";
 		String prenom = "";

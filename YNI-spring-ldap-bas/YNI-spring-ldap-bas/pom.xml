@@ -16,13 +16,19 @@
 	</properties>
 
 	<dependencies>
-	
-	   <dependency>
-        <groupId>commons-lang</groupId>
-        <artifactId>commons-lang</artifactId>
-        <version>1.0</version>
-      </dependency>
-    
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.1</version>
+		</dependency>
+
 
 		<!-- Test environment -->
 		<dependency>
@@ -110,13 +116,28 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.12</version>
 			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.6</version>
+
+				<configuration>
+					<target>
+						<pathconvert pathsep="${line.separator}|   |-- "
+							property="compile_fileset" refid="maven.compile.classpath">
+						</pathconvert>
+						<echo message="|-- compile classpath" />
+						<echo message="|   |" />
+						<echo message="|   |-- ${compile_fileset}" />
+					</target>
+				</configuration>
+			</plugin>
 
 		</plugins>
-		
+
 		<resources>
-		    <resource>
-		        <directory>/src/main</directory>
-		    </resource>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+			</resource>
 		</resources>
 	</build>
 </project>
