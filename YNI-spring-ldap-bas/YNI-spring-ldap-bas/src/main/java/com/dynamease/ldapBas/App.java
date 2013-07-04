@@ -21,6 +21,7 @@ public class App {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("file:src/main/resources/ldapbascontext.xml");
 		App App = context.getBean(App.class);
 		App.start();
+		context.close();
 
 	}
 
@@ -28,23 +29,34 @@ public class App {
 		Scanner sc = new Scanner(System.in);
 		String prenom = "";
 		String nom = "";
-		String encore = "";
+		String choix = "";
 
 		System.out.println("Salut les aminches!");
 
-		do {
-			System.out.print("prenom?");
-			prenom = sc.nextLine();
-			System.out.print("Nom?");
-			nom = sc.nextLine();
-			if (dyniAnnuaireService.existsAsSubscriber(new DyniPerson(prenom, nom))) {
-				System.out.println("Present dans l'annuaire");
-			} else {
-				System.out.println("Non present dans l'annuaire");
+		while (!"f".equalsIgnoreCase(choix)) {
+
+			System.out.println("r : recherche nom");
+			System.out.println("f : fin");
+			System.out.println("Choix?");
+			choix = sc.nextLine();
+			switch (choix) {
+			case "r": {
+				System.out.print("prenom?");
+				prenom = sc.nextLine();
+				System.out.print("Nom?");
+				nom = sc.nextLine();
+				if (dyniAnnuaireService.existsAsSubscriber(new DyniPerson(prenom, nom))) {
+					System.out.println("Present dans l'annuaire");
+				} else {
+					System.out.println("Non present dans l'annuaire");
+				}
+				break;
 			}
-			System.out.print("Autre recherche (o/n)?");
-			encore = sc.nextLine();
-		} while (encore.equals("o"));
+	
+			default:
+				break;
+			}
+		}
 
 		System.out.println("Bye!");
 		sc.close();

@@ -6,7 +6,8 @@ package com.dynamease.ldapBas;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ldap.NamingException;
+import org.springframework.ldap.CommunicationException;
+import org.springframework.ldap.NameNotFoundException;
 import org.springframework.ldap.core.ContextMapper;
 import org.springframework.ldap.core.DirContextAdapter;
 import org.springframework.ldap.core.LdapTemplate;
@@ -50,9 +51,14 @@ public class DyniAnnuaireService implements DyniAnnuaireInterface {
 		// everything is ok
 		// TODO In that case the naming exception should not be caught but
 		// throwed upwards.
-		catch (NamingException e) {
-			logger.info(String.format("LDAP exception raised in existsAsSubscriber : %s", e.getMessage()));
+		catch (NameNotFoundException e) {
+			logger.info(String.format("LDAP NameNotFound exception raised in existsAsSubscriber : %s", person.getFullName()),e);
 			return false;
+		}
+		catch (CommunicationException e) {
+			logger.info(String.format("LDAP CommunicationException exception raised in existsAsSubscriber : %s", person.getFullName()),e);
+			return false;
+
 		}
 
 	}
@@ -91,4 +97,6 @@ public class DyniAnnuaireService implements DyniAnnuaireInterface {
 	private String constructSubscriberDN(DyniPerson subscriber) {
 		return "cn= " + subscriber.getFullName();
 	}
+
+	
 }
