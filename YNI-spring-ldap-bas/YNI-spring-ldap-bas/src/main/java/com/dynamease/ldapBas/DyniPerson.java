@@ -20,7 +20,6 @@ public class DyniPerson {
 	}
 	
 	
-
 	public DyniPerson() {
 		super();
 			}
@@ -43,8 +42,38 @@ public class DyniPerson {
 		return this.lastName;
 	}
 
-	public String getFullName() {
+	public String buildFullName() {
 		return this.firstName + " " + this.lastName;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DyniPerson other = (DyniPerson) obj;
+		if (firstName == null) {
+			if (other.firstName != null)
+				return false;
+		} else if (!firstName.equals(other.firstName))
+			return false;
+		if (lastName == null) {
+			if (other.lastName != null)
+				return false;
+		} else if (!lastName.equals(other.lastName))
+			return false;
+		return true;
+	}
+
+
+	@Override
+	public String toString() {
+		return String.format("DyniPerson [firstName=%s, lastName=%s]", firstName, lastName);
 	}
 
 }
