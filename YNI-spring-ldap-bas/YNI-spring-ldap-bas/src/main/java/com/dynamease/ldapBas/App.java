@@ -1,5 +1,6 @@
 package com.dynamease.ldapBas;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,8 +32,8 @@ public class App {
 		getNamePerson(sc, toReturn);
 		return toReturn;
 	}
-	
-	void getNamePerson(Scanner sc, DyniPerson person){
+
+	void getNamePerson(Scanner sc, DyniPerson person) {
 		String prenom = "";
 		String nom = "";
 
@@ -53,9 +54,11 @@ public class App {
 		while (!"f".equalsIgnoreCase(choix)) {
 
 			System.out.println("r : recherche nom");
+			System.out.println("i : recherche id");
 			System.out.println("p : presence nom");
 			System.out.println("+ : ajout subscriber");
-			System.out.println("f : fin");
+			System.out.println("- : suppression subscriber");
+					System.out.println("f : fin");
 			System.out.println("Choix?");
 			choix = sc.nextLine();
 			switch (choix) {
@@ -67,24 +70,54 @@ public class App {
 				}
 				break;
 			}
-			case "r": {
-				DyniSubscriber trouve = null;
-				if ((trouve = dyniAnnuaireService.getSubscriber(inputPerson(sc))) != null) {
-					System.out.println("Present dans l'annuaire");
+			
+			case "i" : {
+				DyniSubscriber trouve;
+				System.out.println("Subscriber ID?");
+				trouve = dyniAnnuaireService.getSubscriber(Integer.parseInt(sc.nextLine()));
+				if (trouve == null) {
+					System.out.println("Id non existant");
+				}
+				else {
 					System.out.println(trouve.toString());
+				}
+				break;
+
+			}
+			case "r": {
+				List<DyniSubscriber> trouve = dyniAnnuaireService.getHomonyms(inputPerson(sc));
+				if (trouve != null) {
+					System.out.println("Present(s) dans l'annuaire : ");
+					for (DyniSubscriber person : trouve) {
+						System.out.println(person.toString());
+					}
 				} else {
-					System.out.println("Non present dans l'annuaire");
+					System.out.println("Personne de ce nom la dans l'annuaire");
 				}
 				break;
 			}
 
 			case "+": {
 				DyniSubscriber aCreer = new DyniSubscriber();
-				getNamePerson(sc,aCreer);
+				getNamePerson(sc, aCreer);
 				System.out.println("Subscriber ID?");
 				aCreer.setSubscriberid(Integer.parseInt(sc.nextLine()));
 				try {
 					dyniAnnuaireService.create(aCreer);
+				} catch (DynInvalidSubIdException e) {
+					System.out.println("Subscriber Id invalid");
+				}
+				break;
+			}
+
+			
+			case "-": {
+				DyniSubscriber aSuppr = new DyniSubscriber();
+				getNamePerson(sc, aSuppr);
+				System.out.println("Subscriber ID?");
+				aSuppr.setSubscriberid(Integer.parseInt(sc.nextLine()));
+				try {
+					dyniAnnuaireService.delete(aSuppr);
 				} catch (DynInvalidSubIdException e) {
 					System.out.println("Subscriber Id invalid");
 				}

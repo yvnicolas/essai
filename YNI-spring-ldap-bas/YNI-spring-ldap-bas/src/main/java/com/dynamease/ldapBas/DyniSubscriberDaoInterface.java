@@ -26,15 +26,14 @@ public interface DyniSubscriberDaoInterface {
 	boolean isPresent(DyniPerson person);
 
 	/**
-	 * Finds a subscriber matching the person characteristics given in
+	 * Finds a subscriber matching the id given in
 	 * parameters
 	 * 
-	 * @param person
+	 * @param id a unique Dynamease id Identifier
 	 * @return the full Dynisubscriber with data found in the directory
 	 * @return null if none is found
-	 * @return TODO : unsure about the return in homonyms case (multiple found)
 	 */
-	DyniSubscriber getSubscriber(DyniPerson person);
+	DyniSubscriber getSubscriber(int id);
 
 	/**
 	 * Gets the list of all subscribers matching the person characteristics

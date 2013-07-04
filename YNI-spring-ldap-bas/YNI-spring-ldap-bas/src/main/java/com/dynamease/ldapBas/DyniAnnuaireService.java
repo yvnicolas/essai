@@ -9,10 +9,7 @@ import java.util.Properties;
 import javax.annotation.Resource;
 import javax.naming.directory.SearchControls;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ldap.CommunicationException;
 import org.springframework.ldap.NameNotFoundException;
 import org.springframework.ldap.core.ContextMapper;
 import org.springframework.ldap.core.DirContextAdapter;
@@ -21,11 +18,7 @@ import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.stereotype.Service;
 
 /**
- * @author yves
- * 
- */
-/**
- * @author yves
+ * @author Yves Nicolas
  * 
  */
 @Service
@@ -41,7 +34,6 @@ public class DyniAnnuaireService implements DyniSubscriberDaoInterface {
 		super();
 	}
 
-	private static final Logger logger = LoggerFactory.getLogger(DyniAnnuaireService.class);
 
 	/*
 	 * (non-Javadoc)
@@ -52,79 +44,48 @@ public class DyniAnnuaireService implements DyniSubscriberDaoInterface {
 	 */
 	@Override
 	public boolean isPresent(DyniPerson person) {
-
-		try {
-
-			DyniSubscriber result = (DyniSubscriber) ldapTemplate.lookup(constructSubscriberDN(person), new SubscriberContextMapper());
-
-			// result actually should never be null as if the subscriber is not
-			// found an exception is raides
-			if (result == null) {
-				logger.debug(String.format(">>> retour result null du lookup mais sans exception"));
-				return false;
-			}
-
-			else
-				return true;
-		}
-
-		// Raised if no match found
-		catch (NameNotFoundException e) {
-			logger.info(String.format("LDAP NameNotFound exception raised in existsAsSubscriber : %s", person.buildFullName()), e);
+		if (getHomonyms(person).isEmpty()) {
 			return false;
-
-			// Raised in case the connection to the directory is not valid
-		} catch (CommunicationException e) {
-			logger.info(String.format("LDAP CommunicationException exception raised in existsAsSubscriber : %s", person.buildFullName()), e);
-			return false;
-
-		}
-
+		} else
+			return true;
 	}
 
-	@Override
-	public DyniSubscriber getSubscriber(DyniPerson person) {
-		DyniSubscriber toReturn = null;
-		String dn = constructSubscriberDN(person);
-		try {
-			toReturn = (DyniSubscriber) ldapTemplate.lookup(dn, getContextMapper(DyniSubscriber.class));
-		} catch (NameNotFoundException e) {
-			logger.info(String.format("LDAP CommunicationException exception raised in getSubscriber : %s", person.buildFullName()), e);
-			return null;
-		}
-		return toReturn;
-	}
-
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<DyniSubscriber> getHomonyms(DyniPerson person) {
-		// TODO Auto-generated method stub
-		return null;
+
+		SearchControls searchControls = new SearchControls(SearchControls.ONELEVEL_SCOPE, 100, 10000, null, true, false);
+		StringBuilder sb = new StringBuilder();
+		sb.append("(");
+		sb.append(dynLdapAttributes.getProperty("full"));
+		sb.append("=");
+		sb.append(person.buildFullName());
+		sb.append(")");
+		String filter = sb.toString();
+
+		return ldapTemplate.search("", filter, searchControls, getContextMapper(DyniSubscriber.class));
+
 	}
 
-	/**Used to verify possible inconsistencies in subscriber id
-	 * @param subscriber
-	 * @return null if no Dynsubscriber exists in the directory with the id from the subscriber passed in parameter
-	 * @return the DynSubscriber in the directory matching the id of the one given as a parameter
-	 */
-	protected DyniSubscriber subIdAlreadyInUse(DyniSubscriber subscriber) {
-		
+	@Override
+	public DyniSubscriber getSubscriber(int id) {
+
 		SearchControls searchControls = new SearchControls(SearchControls.ONELEVEL_SCOPE, 100, 10000, null, true, false);
 		StringBuilder sb = new StringBuilder();
 		sb.append("(");
 		sb.append(dynLdapAttributes.getProperty("subid"));
 		sb.append("=");
-		sb.append(subscriber.getSubscriberid());
+		sb.append(id);
 		sb.append(")");
 		String filter = sb.toString();
-		
+
 		List<?> searchResult = ldapTemplate.search("", filter, searchControls, getContextMapper(DyniSubscriber.class));
 		if (searchResult.isEmpty()) {
 			return null;
-		}
-		else {
+		} else {
 			return (DyniSubscriber) searchResult.get(0);
 		}
-		
+
 	}
 
 	@Override
@@ -132,7 +93,7 @@ public class DyniAnnuaireService implements DyniSubscriberDaoInterface {
 		String dn = constructSubscriberDN(subscriber);
 
 		// checks whether the id already exists
-		if (subIdAlreadyInUse(subscriber)!=null) {
+		if (getSubscriber(subscriber.getSubscriberid()) != null) {
 			throw new DynInvalidSubIdException();
 		}
 
@@ -145,20 +106,21 @@ public class DyniAnnuaireService implements DyniSubscriberDaoInterface {
 
 	@Override
 	public void delete(DyniSubscriber subscriber) throws DynInvalidSubIdException {
-		
+
 		DyniSubscriber toDelete;
-		
+
 		// checks wether the Id exists and if not throw exception
-		toDelete = subIdAlreadyInUse(subscriber);
+		toDelete = getSubscriber(subscriber.getSubscriberid());
 		if (toDelete == null) {
 			throw new DynInvalidSubIdException();
 		}
-		
-		// checks that what was in the directory is the same as the one to delete
+
+		// checks that what was in the directory is the same as the one to
+		// delete
 		if (!(subscriber.equals(toDelete))) {
 			throw new DynInvalidSubIdException();
 		}
-		
+
 		// Actually deletes the object in the directory
 		ldapTemplate.unbind(constructSubscriberDN(subscriber));
 
@@ -166,21 +128,15 @@ public class DyniAnnuaireService implements DyniSubscriberDaoInterface {
 
 	@Override
 	public void update(DyniSubscriber subscriber) throws DynInvalidSubIdException {
-		
+
 		DirContextOperations context;
-		
+
 		try {
 			context = ldapTemplate.lookupContext(constructSubscriberDN(subscriber));
-		}
-		catch (NameNotFoundException e) {
+		} catch (NameNotFoundException e) {
 			throw new DynInvalidSubIdException();
 		}
-				
-		// checks that what was in the directory is the same as the one to update
-		if (subscriber.getSubscriberid()!= Integer.parseInt(context.getStringAttribute(dynLdapAttributes.getProperty("subid")))) {
-			throw new DynInvalidSubIdException();
-		}
-		
+
 		// Actually updates the object in the directory
 		subscriberMaptoContext(subscriber, context);
 		ldapTemplate.modifyAttributes(context);
@@ -268,15 +224,16 @@ public class DyniAnnuaireService implements DyniSubscriberDaoInterface {
 		context.setAttributeValue(dynLdapAttributes.getProperty("subid"), sb.toString());
 	}
 
-	/**
-	 * Generates the theoretical DN of a subscriber passed as a DyniPerson in
-	 * the parameter
-	 * 
-	 * @param subscriber
-	 * @return
-	 */
-	private String constructSubscriberDN(DyniPerson subscriber) {
-		return "cn= " + subscriber.buildFullName();
+	private String constructSubscriberDN(DyniSubscriber subscriber) {
+		StringBuilder sb = new StringBuilder(dynLdapAttributes.getProperty("full"));
+		sb.append("=");
+		sb.append(subscriber.buildFullName());
+		sb.append("+");
+		sb.append(dynLdapAttributes.getProperty("subid"));
+		sb.append("=");
+		sb.append(subscriber.getSubscriberid());
+		return sb.toString();
+
 	}
 
 }
