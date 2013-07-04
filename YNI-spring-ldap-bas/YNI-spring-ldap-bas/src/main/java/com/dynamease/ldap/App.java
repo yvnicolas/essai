@@ -1,4 +1,4 @@
-package com.dynamease.ldapBas;
+package com.dynamease.ldap;
 
 import java.util.List;
 import java.util.Scanner;

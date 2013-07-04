@@ -20,7 +20,7 @@
 	<!-- <import resource="infra/ldap-infra-test.xml" /> -->
 
 
-	<context:component-scan base-package="com.dynamease.ldapBas" />
+	<context:component-scan base-package="com.dynamease.ldap" />
 	<context:annotation-config />
 	
 	<util:properties id="dynattributesmapper" location="file:src/main/resources/dynattrmapper.prop" />

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.dynamease.ldapBas;
+package com.dynamease.ldap;
 
 /**
  * Concrete implementation of Person objects

@@ -1,4 +1,4 @@
-package com.dynamease.ldapBas;
+package com.dynamease.ldap;
 
 public class DynInvalidSubIdException extends Exception {
 

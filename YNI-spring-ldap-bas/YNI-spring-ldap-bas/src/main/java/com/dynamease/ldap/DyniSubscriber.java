@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.dynamease.ldapBas;
+package com.dynamease.ldap;
 
 /**
  * @author yves
