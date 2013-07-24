@@ -26,13 +26,10 @@ public class DynCategorizer {
 
 	}
 
-	// public DynCategorizer(DynSubscriber sub, DynExternalAddressBook addrBook,
-	// DynCategories defaultcat) {
-	// this.sub = sub;
-	// this.addrBook = addrBook;
-	// this.defaultcat = defaultcat;
-	// }
 
+	
+	// TODO : rajouter la prise en compte d'un mapping de catégories spécifiques 
+	
 	/**
 	 * Main entry to the DynCategorizer. To be called on an external Address
 	 * book For each contact in the address book, will compute the cateogries

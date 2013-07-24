@@ -56,5 +56,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="/autoPA"/>
 	<classpathentry exported="true" kind="lib" path="/DynDemoAndroAppTest/libs/spring-test-4.0.0.M1.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/springframework/social/spring-social-linkedin/1.0.0.RC1/spring-social-linkedin-1.0.0.RC1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

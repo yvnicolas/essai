@@ -3,8 +3,7 @@ package com.dynamease.addressBooks;
 import java.util.Iterator;
 import java.util.Set;
 
-import com.dynamease.entity.DynCategories;
-import com.dynamease.entity.DynPerson;
+import com.dynamease.entity.DynSubscriber;
 
 public interface DynExternalAddressBook extends Iterator<DynCatRatedPerson> {
 	
@@ -16,4 +15,6 @@ public interface DynExternalAddressBook extends Iterator<DynCatRatedPerson> {
 	 */
 	@Override
 	public DynCatRatedPerson next();
+
+	DynCatRatedPerson next(DynSubscriber sub);
 }
