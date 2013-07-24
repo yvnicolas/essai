@@ -22,16 +22,17 @@ public class DynCategorizer {
 
 	@Autowired
 	private DynContactDaoInterface dynContactDao;
-	
+
 	public DynCategorizer() {
-		
+
 	}
 
-//	public DynCategorizer(DynSubscriber sub, DynExternalAddressBook addrBook, DynCategories defaultcat) {
-//		this.sub = sub;
-//		this.addrBook = addrBook;
-//		this.defaultcat = defaultcat;
-//	}
+	// public DynCategorizer(DynSubscriber sub, DynExternalAddressBook addrBook,
+	// DynCategories defaultcat) {
+	// this.sub = sub;
+	// this.addrBook = addrBook;
+	// this.defaultcat = defaultcat;
+	// }
 
 	/**
 	 * Main entry to the DynCategorizer. To be called on an external Address
@@ -42,8 +43,9 @@ public class DynCategorizer {
 	 * @param book
 	 * @param mode
 	 * @param defaultcat
+	 * @throws DynDirectoryAccessException
 	 */
-	public void categorize(DynSubscriber subscriber, DynExternalAddressBook book, DynCatMode mode, DynCategories defaultcat) {
+	public void categorize(DynSubscriber subscriber, DynExternalAddressBook book, DynCatMode mode, DynCategories defaultcat) throws DynDirectoryAccessException {
 
 		// set up object
 		this.sub = subscriber;
@@ -51,7 +53,7 @@ public class DynCategorizer {
 		this.defaultcat = defaultcat;
 
 		// Main loop on each contact in the address book
-		while (!addrBook.hasNext()) {
+		while (addrBook.hasNext()) {
 			DynCatRatedPerson catContact = addrBook.next();
 			DynContact toBeAdded;
 
@@ -65,17 +67,12 @@ public class DynCategorizer {
 			updateCat(toBeAdded, catContact, mode);
 
 			// Updates the directory
-			try {
-				dynContactDao.addContact(toBeAdded);
-			} catch (DynDirectoryAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			dynContactDao.addContact(toBeAdded);
 
 		}
 	}
 
-	void updateCat(DynContact toBeAdded, DynCatRatedPerson catContact, DynCatMode mode) {
+	private void updateCat(DynContact toBeAdded, DynCatRatedPerson catContact, DynCatMode mode) {
 
 		DynCategories catFromBook = inferCat(catContact, mode);
 
@@ -88,11 +85,13 @@ public class DynCategorizer {
 			case AUTO:
 			case LIGHTWEIGHT:
 				toBeAdded.getCategories().add(catFromBook);
+				break;
 
 			case RESET:
 			case STRONGAUTO:
 				toBeAdded.setCategories(new HashSet<DynCategories>());
 				toBeAdded.getCategories().add(catFromBook);
+				break;
 
 			}
 		}
