@@ -16,7 +16,6 @@ public class DynCategorizer {
 
 	private static final int minLevel = 60;
 
-	private DynSubscriber sub;
 	private DynExternalAddressBook addrBook;
 	private DynCategories defaultcat;
 
@@ -47,8 +46,6 @@ public class DynCategorizer {
 	 */
 	public void categorize(DynSubscriber subscriber, DynExternalAddressBook book, DynCatMode mode, DynCategories defaultcat) throws DynDirectoryAccessException {
 
-		// set up object
-		this.sub = subscriber;
 		this.addrBook = book;
 		this.defaultcat = defaultcat;
 

@@ -46,7 +46,6 @@ public class DynCategorizerTest {
 		// Under Test class setup with private field reflection set up
 		underTest = new DynCategorizer();
 
-		ReflectionTestUtils.setField(underTest, "sub", subyni, DynSubscriber.class);
 		ReflectionTestUtils.setField(underTest, "defaultcat", DynCategories.FRIEND, DynCategories.class);
 		ReflectionTestUtils.setField(underTest, "dynContactDao", contactDaoMock, DynContactDaoInterface.class);
 		ReflectionTestUtils.setField(underTest, "addrBook", addrBookMock, DynExternalAddressBook.class);
