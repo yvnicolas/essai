@@ -1,0 +1,137 @@
+[10:31:36] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[10:37:34] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[10:52:53] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[10:57:46] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[11:00:11] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[11:12:15] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[11:16:48] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[12:56:55] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[12:57:18] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[12:58:08] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[12:58:59] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[13:07:16] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[13:07:23] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[13:07:23] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[14:33:09] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[14:33:16] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:33:16] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:26:20] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:26:26] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:26:26] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:27:21] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:27:27] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:27:27] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:27:30] ERROR [org.apache.directory.server.ldap.LdapServer] - ERR_171 Failed to bind an LDAP service (10 389) to the service registry.
+java.net.BindException: Adresse déjà utilisée
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:198)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:547)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:422)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[16:30:04] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:30:10] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:30:10] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:34:09] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:34:15] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:34:15] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:36:52] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:36:58] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:36:58] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:37:20] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:37:26] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:37:27] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:37:27] ERROR [org.apache.directory.server.ldap.LdapServer] - ERR_171 Failed to bind an LDAP service (10 389) to the service registry.
+java.net.BindException: Adresse déjà utilisée
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:198)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:547)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:422)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[16:38:23] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:38:29] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:38:30] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:38:30] ERROR [org.apache.directory.server.ldap.LdapServer] - ERR_171 Failed to bind an LDAP service (10 389) to the service registry.
+java.net.BindException: Adresse déjà utilisée
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:198)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:547)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:422)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[16:41:45] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:41:51] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:41:52] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:41:52] ERROR [org.apache.directory.server.ldap.LdapServer] - ERR_171 Failed to bind an LDAP service (10 389) to the service registry.
+java.net.BindException: Adresse déjà utilisée
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:198)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:547)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:422)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[16:57:16] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:57:23] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:57:23] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:58:26] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:58:32] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:58:32] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:22:39] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:22:45] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:22:45] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:23:11] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:23:17] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:23:17] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:23:50] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:23:56] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:23:57] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:29:01] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:29:08] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:29:08] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:52:48] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:52:54] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:52:54] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:53:55] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=coucou' is not present in the entry
+[17:53:55] ERROR [org.apache.directory.server.core.schema.SchemaInterceptor] - ERR_60 Entry dc=coucou,dc=apache,dc=org does not contain a STRUCTURAL ObjectClass
+[17:58:34] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:58:40] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:58:40] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[18:01:27] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[18:01:34] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[18:01:34] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[18:03:30] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[18:03:36] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[18:03:36] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
