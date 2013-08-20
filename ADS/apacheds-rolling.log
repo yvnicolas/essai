@@ -135,3 +135,36 @@ java.net.BindException: Adresse déjà utilisée
 [18:03:30] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
 [18:03:36] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
 [18:03:36] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[11:55:21] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[11:55:29] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[11:55:29] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[13:00:57] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[13:01:03] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[13:01:04] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[13:01:05] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=dynamease' is not present in the entry
+[14:12:27] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[14:12:33] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:12:34] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[14:12:34] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=dynamease' is not present in the entry
+[14:15:39] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[14:15:45] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:15:46] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[14:15:46] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=dynamease' is not present in the entry
+[15:51:55] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[15:52:01] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[15:52:01] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=dynamease' is not present in the entry
+[15:56:16] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[15:56:22] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[15:56:22] ERROR [org.apache.directory.api.ldap.model.entry.DefaultAttribute] - ERR_04487_ATTRIBUTE_IS_SINGLE_VALUED The attribute 'dc' is single valued, we cant add no more values into it
+[15:58:12] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[15:58:18] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[15:58:18] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=dynamease' is not present in the entry
+[16:08:21] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:08:27] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:08:27] ERROR [org.apache.directory.api.ldap.model.entry.DefaultAttribute] - ERR_04487_ATTRIBUTE_IS_SINGLE_VALUED The attribute 'dc' is single valued, we cant add no more values into it
+[16:19:43] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:19:50] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:19:50] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=dynamease' is not present in the entry
+[11:05:47] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[11:05:54] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[11:05:54] WARN [org.apache.directory.server.core.normalization.NormalizationInterceptor] - The Rdn 'dc=dynamease' is not present in the entry
