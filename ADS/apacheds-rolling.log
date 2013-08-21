@@ -235,3 +235,581 @@ javax.naming.NamingException: No DN for entry
 	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
 	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
 	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:39:55] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:39:55] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:39:55] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[14:39:55] ERROR [org.apache.directory.shared.ldap.ldif.LdifReader] - A ldif entry must start with a DN
+[14:39:55] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.NamingException: No DN for entry
+	at org.apache.directory.shared.ldap.ldif.LdifReader.parseDn(LdifReader.java:524)
+	at org.apache.directory.shared.ldap.ldif.LdifReader.parseEntry(LdifReader.java:1173)
+	at org.apache.directory.shared.ldap.ldif.LdifReader.init(LdifReader.java:248)
+	at org.apache.directory.shared.ldap.ldif.LdifReader.<init>(LdifReader.java:295)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:152)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:42:49] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:42:49] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:42:50] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[14:42:50] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.NamingException: Failed to initialize search base cn=dynScheme, ou=schema
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.getRelativeName(LdifFileLoader.java:243)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:174)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for cn=dynScheme,ou=schema partition
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:44:42] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:44:42] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:44:43] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[14:44:43] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.NamingException: Failed to initialize search base cn=dynScheme, ou=schema
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.getRelativeName(LdifFileLoader.java:243)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:174)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:45:52] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:45:52] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:45:52] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[14:45:52] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.NamingException: Failed to initialize search base cn=dynScheme, ou=schema
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.getRelativeName(LdifFileLoader.java:243)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:174)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:46:35] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:46:35] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:46:36] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[14:46:36] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.directory.InvalidAttributeIdentifierException: [LDAP: error code 17 - failed to add entry m-oid=1.3.6.1.4.1.18060.5.2.1,ou=attributetypes,cn=dynScheme,ou=schema: m-description not found in attribute registry!]; remaining name 'm-oid=1.3.6.1.4.1.18060.5.2.1, ou=attributetypes'
+	at com.sun.jndi.ldap.LdapCtx.mapErrorCode(LdapCtx.java:3156)
+	at com.sun.jndi.ldap.LdapCtx.processReturnCode(LdapCtx.java:3033)
+	at com.sun.jndi.ldap.LdapCtx.processReturnCode(LdapCtx.java:2840)
+	at com.sun.jndi.ldap.LdapCtx.c_createSubcontext(LdapCtx.java:811)
+	at com.sun.jndi.toolkit.ctx.ComponentDirContext.p_createSubcontext(ComponentDirContext.java:337)
+	at com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.createSubcontext(PartialCompositeDirContext.java:266)
+	at javax.naming.directory.InitialDirContext.createSubcontext(InitialDirContext.java:202)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:183)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:47:53] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:47:53] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:47:53] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[14:47:53] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.NamingException: Failed to initialize search base cn=dynScheme, ou=schema
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.getRelativeName(LdifFileLoader.java:243)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:174)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:49:40] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:49:40] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:49:40] ERROR [org.apache.directory.server.core.authn.SimpleAuthenticator] - Authentication error : uid=admin,ou=systems
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[14:49:57] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[14:49:57] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[14:49:57] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[14:49:57] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.NamingException: Failed to initialize search base cn=dynScheme, ou=schema
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.getRelativeName(LdifFileLoader.java:243)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:174)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:23)
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-FacsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute enhancedSearchGuide does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute crossCertificatePair does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedAlgorithms does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute deltaRevocationList does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute namingContexts does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute altServer does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedExtension does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute facsimileTelephoneNumber does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute preferredDeliveryMethod does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute byteCode does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute telexNumber does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute teletexTerminalIdentifier does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute cACertificate does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userCertificate does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute certificateRevocationList does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute authorityRevocationList does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeSpecification does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute searchGuide does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute custom2 does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute custom1 does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute custom4 does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute custom3 does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userPKCS12 does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute jpegPhoto does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute audio does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute personalSignature does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMaximumQuality does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute krb5Key does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute singleLevelQuality does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute subtreeMinimumQuality does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute c-TelexNumber does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute mailPreferenceOption does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dSAQuality does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute javaSerializedData does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute photo does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedControl does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedSASLMechanisms does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute supportedLDAPVersion does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute xmozillausehtmlmail does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute dynamicSubtrees does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute entryTtl does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute nisNetgroupTriple does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute userSMIMECertificate does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute otherMailbox does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.schema.bootstrap.BootstrapAttributeTypeRegistry] - Attribute bootParameter does not have normalizer : using NoopNormalizer
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute objectClass
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition] - Using the default entry cache size of 10000 for defaultPartitionName partition
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.2
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.3
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.1
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.6
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.7
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.4
+[15:04:23] WARN [org.apache.directory.server.core.partition.impl.btree.BTreePartition] - Using default cache size of 100 for index on attribute 1.3.6.1.4.1.18060.0.4.1.2.5
+[15:04:23] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'default'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[15:04:23] WARN [org.apache.directory.shared.ldap.ldif.LdifReader] - No version information : assuming version: 1
+[15:04:23] ERROR [org.apache.directory.server.protocol.shared.store.LdifFileLoader] - Failed to import LDIF into backing store.
+javax.naming.NamingException: Failed to initialize search base cn=dynScheme, ou=schema
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.getRelativeName(LdifFileLoader.java:243)
+	at org.apache.directory.server.protocol.shared.store.LdifFileLoader.execute(LdifFileLoader.java:174)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
+	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
+	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:59)
