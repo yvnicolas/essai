@@ -1,6 +1,5 @@
 package com.dynamease.test.ads;
 
-import java.io.File;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
@@ -8,17 +7,13 @@ import java.util.Scanner;
 import org.apache.directory.api.ldap.model.entry.Entry;
 import org.apache.directory.api.ldap.model.name.Dn;
 import org.apache.directory.api.ldap.model.schema.SchemaManager;
-import org.apache.directory.api.ldap.model.schema.registries.SchemaLoader;
-import org.apache.directory.api.ldap.schemaextractor.SchemaLdifExtractor;
-import org.apache.directory.api.ldap.schemaextractor.impl.DefaultSchemaLdifExtractor;
-import org.apache.directory.api.ldap.schemaloader.LdifSchemaLoader;
 import org.apache.directory.api.ldap.schemamanager.impl.DefaultSchemaManager;
 import org.apache.directory.server.core.api.DirectoryService;
 import org.apache.directory.server.core.api.partition.Partition;
 import org.apache.directory.server.core.api.schema.SchemaPartition;
 import org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory;
+import org.apache.directory.server.core.partition.impl.avl.AvlPartition;
 import org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmIndex;
-import org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition;
 import org.apache.directory.server.core.partition.ldif.LdifPartition;
 import org.apache.directory.server.ldap.LdapServer;
 import org.apache.directory.server.protocol.shared.store.LdifFileLoader;
@@ -49,10 +44,9 @@ public class ADSTest {
 	 *             If the partition can't be added
 	 */
 	private Partition addPartition(String partitionId, Dn partitionDn, SchemaManager schemaManager) throws Exception {
-		// Create a new partition named 'foo'.
-		JdbmPartition partition = new JdbmPartition(schemaManager);
+
+		AvlPartition partition = new AvlPartition(schemaManager);
 		partition.setId(partitionId);
-		partition.setPartitionPath(new File(workDir, partitionId).toURI());
 		partition.setSuffixDn(partitionDn);
 		service.addPartition(partition);
 
@@ -88,13 +82,8 @@ public class ADSTest {
 	 */
 	private SchemaManager initSchemaPartition() throws Exception {
 
-		// Extract the schema on disk (a brand new one) and load the registries
-		File schemaRepository = new File(workDir, "schema");
-		SchemaLdifExtractor extractor = new DefaultSchemaLdifExtractor(workDir);
-		extractor.extractOrCopy(true);
 
-		SchemaLoader loader = new LdifSchemaLoader(schemaRepository);
-		SchemaManager schemaManager = new DefaultSchemaManager(loader);
+		SchemaManager schemaManager = new DefaultSchemaManager();
 		
 		service.setSchemaManager(schemaManager);
 
@@ -196,7 +185,7 @@ public class ADSTest {
 	// }
 
 	// Essais de modification YNI
-	private void initDirectoryService(File workDir) throws Exception {
+	private void initDirectoryService() throws Exception {
 
 		// Initialize the LDAP service
 		factory.init("instanceYNI");
@@ -269,8 +258,8 @@ public class ADSTest {
 	 * @throws Exception
 	 *             If something went wrong
 	 */
-	public ADSTest(File workDir) throws Exception {
-		initDirectoryService(workDir);
+	public ADSTest() throws Exception {
+		initDirectoryService();
 
 	}
 
@@ -287,39 +276,12 @@ public class ADSTest {
 
 	}
 
-	/**
-	 * Main class.
-	 * 
-	 * @param args
-	 *            Not used.
-	 */
-
-	private static File workDir = new File("/tmp", "/server-work");
-
-	private static void removeDir(File f) {
-
-		if (f.isDirectory()) {
-			for (File f1 : f.listFiles()) {
-				removeDir(f1);
-			}
-		} else {
-			f.delete();
-		}
-
-	}
 
 	public static void main(String[] args) {
 		try {
 
-			// String Filename = System.getProperty("java.io.tmpdir") +
-			// "/server-work";
-			// File workDir = new File(Filename);
-
-			removeDir(workDir);
-			workDir.mkdirs();
-
 			// Create the server
-			ADSTest ads = new ADSTest(workDir);
+			ADSTest ads = new ADSTest();
 
 			// Read an entry
 			Entry result = ads.service.getAdminSession().lookup(new Dn("dc=apache,dc=org"));
