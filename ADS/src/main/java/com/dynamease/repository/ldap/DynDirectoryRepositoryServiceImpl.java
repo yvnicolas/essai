@@ -1,16 +1,21 @@
 package com.dynamease.repository.ldap;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.directory.api.ldap.model.entry.Entry;
 import org.apache.directory.api.ldap.model.name.Dn;
 import org.apache.directory.api.ldap.model.schema.SchemaManager;
+import org.apache.directory.api.ldap.model.schema.registries.SchemaLoader;
+import org.apache.directory.api.ldap.schemaextractor.SchemaLdifExtractor;
+import org.apache.directory.api.ldap.schemaloader.LdifSchemaLoader;
 import org.apache.directory.server.constants.ServerDNConstants;
 import org.apache.directory.server.core.api.DirectoryService;
 import org.apache.directory.server.core.api.partition.Partition;
 import org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory;
 import org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmIndex;
+import org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmPartition;
 import org.apache.directory.server.ldap.LdapServer;
 import org.apache.directory.server.protocol.shared.transport.TcpTransport;
 
@@ -25,28 +30,28 @@ public class DynDirectoryRepositoryServiceImpl implements DynDirectoryRepository
 	/** The LDAP server */
 	private LdapServer server;
 
-	// /**
-	// * Add a new partition to the server
-	// *
-	// * @param partitionId
-	// * The partition Id
-	// * @param partitionDn
-	// * The partition DN
-	// * @return The newly added partition
-	// * @throws Exception
-	// * If the partition can't be added
-	// */
-	// private Partition addPartition(String partitionId, Dn partitionDn,
-	// SchemaManager schemaManager) throws Exception {
-	// // Create a new partition named 'foo'.
-	// JdbmPartition partition = new JdbmPartition(schemaManager);
-	// partition.setId(partitionId);
-	// partition.setPartitionPath(new File(workDir, partitionId).toURI());
-	// partition.setSuffixDn(partitionDn);
-	// service.addPartition(partition);
-	//
-	// return partition;
-	// }
+	 /**
+	 * Add a new partition to the server
+	 *
+	 * @param partitionId
+	 * The partition Id
+	 * @param partitionDn
+	 * The partition DN
+	 * @return The newly added partition
+	 * @throws Exception
+	 * If the partition can't be added
+	 */
+	 private Partition addPartition(String partitionId, Dn partitionDn,
+	 SchemaManager schemaManager) throws Exception {
+	 // Create a new partition named 'foo'.
+	 JdbmPartition partition = new JdbmPartition(schemaManager);
+	 partition.setId(partitionId);
+	 partition.setPartitionPath(new File(workDir, partitionId).toURI());
+	 partition.setSuffixDn(partitionDn);
+	 service.addPartition(partition);
+	
+	 return partition;
+	 }
 
 	/**
 	 * Add a new set of index on the given attributes
@@ -75,37 +80,37 @@ public class DynDirectoryRepositoryServiceImpl implements DynDirectoryRepository
 	 * @throws Exception
 	 *             if the schema LDIF files are not found on the classpath
 	 */
-	// private SchemaManager initSchemaPartition() throws Exception {
-	//
-	// // Extract the schema on disk (a brand new one) and load the registries
-	// File schemaRepository = new File(workDir, "schema");
-	// SchemaLdifExtractor extractor = new DefaultSchemaLdifExtractor(workDir);
-	// extractor.extractOrCopy(true);
-	//
-	// SchemaLoader loader = new LdifSchemaLoader(schemaRepository);
-	// SchemaManager schemaManager = new DefaultSchemaManager(loader);
-	// service.setSchemaManager(schemaManager);
-	//
-	// // Init the LdifPartition
-	// LdifPartition ldifPartition = new LdifPartition(schemaManager);
-	// SchemaPartition schemaPartition = new SchemaPartition(schemaManager);
-	// schemaPartition.setWrappedPartition(ldifPartition);
-	//
-	// // We have to load the schema now, otherwise we won't be able
-	// // to initialize the Partitions, as we won't be able to parse
-	// // and normalize their suffix DN
-	// schemaManager.loadAllEnabled();
-	//
-	// schemaPartition.setSchemaManager(schemaManager);
-	//
-	// List<Throwable> errors = schemaManager.getErrors();
-	//
-	// if (errors.size() != 0) {
-	// throw new Exception("Schema load failed : " + errors);
-	// }
-	//
-	// return schemaManager;
-	// }
+	 private SchemaManager initSchemaPartition() throws Exception {
+	
+	 // Extract the schema on disk (a brand new one) and load the registries
+	 File schemaRepository = new File(workDir, "schema");
+	 SchemaLdifExtractor extractor = new DefaultSchemaLdifExtractor(workDir);
+	 extractor.extractOrCopy(true);
+	
+	 SchemaLoader loader = new LdifSchemaLoader(schemaRepository);
+	 SchemaManager schemaManager = new DefaultSchemaManager(loader);
+	 service.setSchemaManager(schemaManager);
+	
+	 // Init the LdifPartition
+	 LdifPartition ldifPartition = new LdifPartition(schemaManager);
+	 SchemaPartition schemaPartition = new SchemaPartition(schemaManager);
+	 schemaPartition.setWrappedPartition(ldifPartition);
+	
+	 // We have to load the schema now, otherwise we won't be able
+	 // to initialize the Partitions, as we won't be able to parse
+	 // and normalize their suffix DN
+	 schemaManager.loadAllEnabled();
+	
+	 schemaPartition.setSchemaManager(schemaManager);
+	
+	 List<Throwable> errors = schemaManager.getErrors();
+	
+	 if (errors.size() != 0) {
+	 throw new Exception("Schema load failed : " + errors);
+	 }
+	
+	 return schemaManager;
+	 }
 
 	/**
 	 * Initialize the server. It creates the partition, adds the index, and
@@ -125,6 +130,8 @@ public class DynDirectoryRepositoryServiceImpl implements DynDirectoryRepository
 		service = factory.getDirectoryService();
 
 		// first load the schema
+		// first load the schema
+		SchemaManager schemaManager = initSchemaPartition();
 		SchemaManager schemaManager = service.getSchemaManager();
 
 	
