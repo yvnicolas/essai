@@ -813,3 +813,124 @@ javax.naming.NamingException: Failed to initialize search base cn=dynScheme, ou=
 	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:241)
 	at org.springframework.ldap.test.LdapTestUtils.loadLdif(LdapTestUtils.java:216)
 	at com.dynamease.repository.ldap.DriverSpringLdap.main(DriverSpringLdap.java:59)
+[16:20:23] ERROR [net.sf.ehcache.Cache] - Unable to set localhost. This prevents creation of a GUID. Cause was: vdebx: vdebx: nodename nor servname provided, or not known
+java.net.UnknownHostException: vdebx: vdebx: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at net.sf.ehcache.Cache.<clinit>(Cache.java:200)
+	at net.sf.ehcache.config.ConfigurationHelper.createCache(ConfigurationHelper.java:302)
+	at net.sf.ehcache.config.ConfigurationHelper.createDefaultCache(ConfigurationHelper.java:218)
+	at net.sf.ehcache.CacheManager.configure(CacheManager.java:600)
+	at net.sf.ehcache.CacheManager.init(CacheManager.java:359)
+	at net.sf.ehcache.CacheManager.<init>(CacheManager.java:228)
+	at org.apache.directory.server.core.api.CacheService.initialize(CacheService.java:110)
+	at org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory.build(DefaultDirectoryServiceFactory.java:229)
+	at org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory.init(DefaultDirectoryServiceFactory.java:115)
+	at com.dynamease.test.ads.ADSTest.initDirectoryService(ADSTest.java:201)
+	at com.dynamease.test.ads.ADSTest.<init>(ADSTest.java:272)
+	at com.dynamease.test.ads.ADSTest.main(ADSTest.java:305)
+Caused by: java.net.UnknownHostException: vdebx: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 12 more
+[16:20:25] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:20:26] WARN [org.apache.directory.server.core.security.TlsKeyGenerator] - failed to create certificate subject name from host name
+java.net.UnknownHostException: vdebx: vdebx: nodename nor servname provided, or not known
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1438)
+	at org.apache.directory.server.core.security.TlsKeyGenerator.addKeyPair(TlsKeyGenerator.java:266)
+	at org.apache.directory.server.core.DefaultDirectoryService.createBootstrapEntries(DefaultDirectoryService.java:1488)
+	at org.apache.directory.server.core.DefaultDirectoryService.initialize(DefaultDirectoryService.java:1833)
+	at org.apache.directory.server.core.DefaultDirectoryService.startup(DefaultDirectoryService.java:1253)
+	at org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory.build(DefaultDirectoryServiceFactory.java:237)
+	at org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory.init(DefaultDirectoryServiceFactory.java:115)
+	at com.dynamease.test.ads.ADSTest.initDirectoryService(ADSTest.java:201)
+	at com.dynamease.test.ads.ADSTest.<init>(ADSTest.java:272)
+	at com.dynamease.test.ads.ADSTest.main(ADSTest.java:305)
+Caused by: java.net.UnknownHostException: vdebx: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:866)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1258)
+	at java.net.InetAddress.getLocalHost(InetAddress.java:1434)
+	... 9 more
+[16:20:26] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:23:28] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:23:30] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:23:30] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:24:35] ERROR [org.apache.directory.server.ldap.LdapServer] - ERR_171 Failed to bind an LDAP service (10Ê389) to the service registry.
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:344)
+	at sun.nio.ch.Net.bind(Net.java:336)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:199)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:198)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:547)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:422)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+[16:25:03] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:25:04] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:25:05] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:25:50] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:25:52] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:25:52] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:44:21] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:44:22] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:44:23] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[16:56:10] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:56:12] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:56:12] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:11:04] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:11:06] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:11:06] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:11:21] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:11:23] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:11:23] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation Lookup by unauthenticated caller.
+[17:11:26] ERROR [org.apache.directory.server.core.authn.AuthenticationInterceptor] - ERR_5 Attempted operation ADD_REQUEST by unauthenticated caller.
+[17:13:08] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:13:10] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:13:11] ERROR [org.apache.directory.api.ldap.model.name.Dn] - ERR_04268_OID_NOT_FOUND OID 'ou' not found in oid to schema name map!
