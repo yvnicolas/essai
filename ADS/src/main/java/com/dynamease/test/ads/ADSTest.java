@@ -1,7 +1,6 @@
 package com.dynamease.test.ads;
 
 import java.io.IOException;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,8 +14,6 @@ import org.apache.directory.server.core.api.partition.Partition;
 import org.apache.directory.server.core.api.schema.SchemaPartition;
 import org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory;
 import org.apache.directory.server.core.partition.impl.avl.AvlPartition;
-import org.apache.directory.server.core.partition.impl.btree.jdbm.JdbmIndex;
-import org.apache.directory.server.core.partition.ldif.LdifPartition;
 import org.apache.directory.server.ldap.LdapServer;
 import org.apache.directory.server.protocol.shared.store.LdifFileLoader;
 import org.apache.directory.server.protocol.shared.transport.TcpTransport;
@@ -56,26 +53,6 @@ public class ADSTest {
 	}
 
 	/**
-	 * Add a new set of index on the given attributes
-	 * 
-	 * @param partition
-	 *            The partition on which we want to add index
-	 * @param attrs
-	 *            The list of attributes to index
-	 */
-	private void addIndex(Partition partition, String... attrs) {
-		// Index some attributes on the apache partition
-		HashSet<JdbmIndex<String, Entry>> indexedAttributes = new HashSet<JdbmIndex<String, Entry>>();
-
-		for (String attribute : attrs) {
-			indexedAttributes.add(new JdbmIndex<String, Entry>(attribute, false));
-		}
-
-		// ((JdbmPartition) partition).setIndexedAttributes(indexedAttributes);
-
-	}
-
-	/**
 	 * initialize the schema manager and add the schema partition to diectory
 	 * service
 	 * 
@@ -85,13 +62,16 @@ public class ADSTest {
 	private SchemaManager initSchemaPartition() throws Exception {
 
 		SchemaManager schemaManager = new DefaultSchemaManager();
-
 		service.setSchemaManager(schemaManager);
 
-		// Init the LdifPartition
-		LdifPartition ldifPartition = new LdifPartition(schemaManager);
+		Resource ldif = new ClassPathResource("dynSchemeV1.1.ldif");
+		LdifFileLoader fileLoader = new LdifFileLoader(service.getAdminSession(), ldif.getFile().getAbsolutePath());
+		fileLoader.execute();
+	
+		// Init the Partition
+		AvlPartition partition = new AvlPartition(schemaManager);
 		SchemaPartition schemaPartition = new SchemaPartition(schemaManager);
-		schemaPartition.setWrappedPartition(ldifPartition);
+		schemaPartition.setWrappedPartition(partition);
 
 		// We have to load the schema now, otherwise we won't be able
 		// to initialize the Partitions, as we won't be able to parse
@@ -118,74 +98,7 @@ public class ADSTest {
 	 * @throws Exception
 	 *             if there were some problems while initializing the system
 	 */
-	// Initial Source code from depot
 
-	// private void initDirectoryService(File workDir) throws Exception {
-	// // Initialize the LDAP service
-	// service = new DefaultDirectoryService();
-	//
-	// // first load the schema
-	// SchemaManager schemaManager = initSchemaPartition();
-	//
-	// // then the system partition
-	// // this is a MANDATORY partition
-	// Partition systemPartition = addPartition("system", new
-	// Dn(ServerDNConstants.SYSTEM_DN), schemaManager);
-	// service.setSystemPartition(systemPartition);
-	//
-	// // Disable the ChangeLog system
-	// service.getChangeLog().setEnabled(false);
-	// service.setDenormalizeOpAttrsEnabled(true);
-	//
-	// // Now we can create as many partitions as we need
-	// // Create some new partitions named 'foo', 'bar' and 'apache'.
-	// Partition fooPartition = addPartition("foo", new Dn("dc=foo,dc=com"),
-	// schemaManager);
-	// Partition barPartition = addPartition("bar", new Dn("dc=bar,dc=com"),
-	// schemaManager);
-	// Partition apachePartition = addPartition("apache", new
-	// Dn("dc=apache,dc=org"), schemaManager);
-	//
-	// // Index some attributes on the apache partition
-	// addIndex(apachePartition, "objectClass", "ou", "uid");
-	//
-	// // And start the service
-	// service.startup();
-	//
-	// // Inject the foo root entry if it does not already exist
-	// try {
-	// service.getAdminSession().lookup(fooPartition.getSuffixDn());
-	// } catch (Exception lnnfe) {
-	// Dn dnFoo = new Dn("dc=foo,dc=com");
-	// Entry entryFoo = service.newEntry(dnFoo);
-	// entryFoo.add("objectClass", "top", "domain", "extensibleObject");
-	// entryFoo.add("dc", "foo");
-	// service.getAdminSession().add(entryFoo);
-	// }
-	//
-	// // Inject the bar root entry
-	// try {
-	// service.getAdminSession().lookup(barPartition.getSuffixDn());
-	// } catch (Exception lnnfe) {
-	// Dn dnBar = new Dn("dc=bar,dc=com");
-	// Entry entryBar = service.newEntry(dnBar);
-	// entryBar.add("objectClass", "top", "domain", "extensibleObject");
-	// entryBar.add("dc", "bar");
-	// service.getAdminSession().add(entryBar);
-	// }
-	//
-	// // Inject the apache root entry
-	// if (!service.getAdminSession().exists(apachePartition.getSuffixDn())) {
-	// Dn dnApache = new Dn("dc=Apache,dc=Org");
-	// Entry entryApache = service.newEntry(dnApache);
-	// entryApache.add("objectClass", "top", "domain", "extensibleObject");
-	// entryApache.add("dc", "Apache");
-	// service.getAdminSession().add(entryApache);
-	// }
-	//
-	// }
-
-	// Essais de modification YNI
 	private void initDirectoryService() throws Exception {
 
 		// Initialize the LDAP service
@@ -194,6 +107,7 @@ public class ADSTest {
 
 		// first load the schema
 		SchemaManager schemaManager = initSchemaPartition();
+		service.setSchemaManager(schemaManager);
 
 		// Disable the ChangeLog system
 		service.getChangeLog().setEnabled(false);
@@ -207,33 +121,9 @@ public class ADSTest {
 		// schemaManager);
 		Partition apachePartition = addPartition("dynamease", new Dn("dc=dynamease,dc=net"), schemaManager);
 
-		// Index some attributes on the apache partition
-		// addIndex(apachePartition, "objectClass", "ou", "uid");
-
 		// And start the service
 		service.startup();
 
-		// Inject the foo root entry if it does not already exist
-		// try {
-		// service.getAdminSession().lookup(fooPartition.getSuffixDn());
-		// } catch (Exception lnnfe) {
-		// Dn dnFoo = new Dn("dc=foo,dc=com");
-		// Entry entryFoo = service.newEntry(dnFoo);
-		// entryFoo.add("objectClass", "top", "domain", "extensibleObject");
-		// entryFoo.add("dc", "foo");
-		// service.getAdminSession().add(entryFoo);
-		// }
-
-		// Inject the bar root entry
-		// try {
-		// service.getAdminSession().lookup(barPartition.getSuffixDn());
-		// } catch (Exception lnnfe) {
-		// Dn dnBar = new Dn("dc=bar,dc=com");
-		// Entry entryBar = service.newEntry(dnBar);
-		// entryBar.add("objectClass", "top", "domain", "extensibleObject");
-		// entryBar.add("dc", "bar");
-		// service.getAdminSession().add(entryBar);
-		// }
 
 		// Inject the apache root entry
 		if (!service.getAdminSession().exists(apachePartition.getSuffixDn())) {
@@ -243,6 +133,8 @@ public class ADSTest {
 			entryApache.add("dc", "dynamease");
 			service.getAdminSession().add(entryApache);
 		}
+		
+		service.setAllowAnonymousAccess(true);
 
 	}
 
@@ -323,13 +215,8 @@ public class ADSTest {
 					break;
 				case "start":
 					try {
-			
-						Resource ldif = new ClassPathResource("dynSchemeV1.1.ldif");
-						LdifFileLoader fileLoader = new LdifFileLoader(ads.service.getAdminSession(), ldif.getFile().getAbsolutePath());
-						int entrycount = fileLoader.execute();
-						
+
 						ads.server.start();
-						System.out.println(String.format("%s entrées chargees, Serveur demarre", entrycount));
 						System.out.println("Liste des schémas enables");
 						for (Schema s : ads.service.getSchemaManager().getEnabled()) {
 							System.out.println(s.getSchemaName());
@@ -338,7 +225,6 @@ public class ADSTest {
 						for (Schema s : ads.service.getSchemaManager().getDisabled()) {
 							System.out.println(s.getSchemaName());
 						}
-
 
 					} catch (Exception e) {
 						System.out.println("Le serveur ne peut pas demarrer");

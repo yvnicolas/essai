@@ -1090,3 +1090,109 @@ java.net.BindException: Adresse déjà utilisée
 [14:46:14] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
 [14:50:13] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
 [14:50:20] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[15:43:32] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[15:43:39] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[15:52:11] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[15:52:17] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:36:28] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:36:34] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:39:04] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:39:10] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:40:56] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:41:02] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[16:58:47] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[16:58:54] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:07:09] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:07:15] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:07:20] ERROR [org.apache.directory.server.ldap.LdapServer] - ERR_171 Failed to bind an LDAP service (10 391) to the service registry.
+java.net.BindException: Adresse déjà utilisée
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:198)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:547)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:422)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[17:08:00] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:08:06] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:11:01] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:11:08] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:12:49] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:12:56] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:13:51] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:13:57] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:20:19] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:20:26] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:20:30] ERROR [org.apache.directory.server.ldap.LdapServer] - ERR_171 Failed to bind an LDAP service (10 391) to the service registry.
+java.net.BindException: Adresse déjà utilisée
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:198)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:547)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:68)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:422)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+[17:20:55] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:21:01] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:36:53] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:36:59] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:36:59] ERROR [org.apache.directory.api.ldap.schemaloader.LdifSchemaLoader] - ERR_10004 Expecting to find a schema.ldif file in provided baseDirectory path '/home/yves/ProtoDynamease/GitRepo/essai/ADS/target/classes/dynSchemeV1.1.ldif/ou=schema.ldif' but no such file found.
+[17:47:44] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:47:50] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[17:49:15] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[17:49:22] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[18:12:55] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[18:13:01] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[18:17:36] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[18:17:43] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[18:20:56] WARN [org.apache.directory.server.ldap.LdapProtocolHandler] - Unexpected exception forcing session to close: sending disconnect notice to client.
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.NoSuchMethodError: org.slf4j.helpers.MessageFormatter.format(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String; (Hexdump: 30 1B 02 01 01 60 16 02 01 03 04 09 61 6E 6F 6E 79 6D 6F 75 73 80 06 73 65 63 72 65 74)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:242)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1200(DefaultIoFilterChain.java:47)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:765)
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:417)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:410)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:710)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:664)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:653)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1124)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:724)
+Caused by: java.lang.NoSuchMethodError: org.slf4j.helpers.MessageFormatter.format(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/String;
+	at org.slf4j.impl.Log4jLoggerAdapter.error(Log4jLoggerAdapter.java:535)
+	at org.apache.directory.api.ldap.codec.actions.bindRequest.StoreName.action(StoreName.java:97)
+	at org.apache.directory.api.ldap.codec.actions.bindRequest.StoreName.action(StoreName.java:49)
+	at org.apache.directory.api.asn1.ber.grammar.AbstractGrammar.executeAction(AbstractGrammar.java:136)
+	at org.apache.directory.api.asn1.ber.Asn1Decoder.treatTLVDoneState(Asn1Decoder.java:599)
+	at org.apache.directory.api.asn1.ber.Asn1Decoder.decode(Asn1Decoder.java:735)
+	at org.apache.directory.api.ldap.codec.protocol.mina.LdapProtocolDecoder.decode(LdapProtocolDecoder.java:145)
+	at org.apache.directory.api.ldap.codec.protocol.mina.LdapProtocolDecoder.decode(LdapProtocolDecoder.java:94)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:232)
+	... 15 more
+[18:20:56] WARN [org.apache.directory.server.ldap.LdapProtocolHandler] - Null LdapSession given to cleanUpSession.
+[18:23:08] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[18:23:15] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[18:23:40] WARN [org.apache.directory.api.ldap.model.entry.DefaultEntry] - The attribute 'dyncategory' cannot be stored
+[18:33:22] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[18:33:29] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
+[19:09:39] WARN [org.apache.directory.server.core.DefaultDirectoryService] - ApacheDS shutdown hook has NOT been registered with the runtime.  This default setting for standalone operation has been overriden.
+[19:09:46] WARN [org.apache.directory.server.core.DefaultDirectoryService] - You didn't change the admin password of directory service instance 'instanceYNI'.  Please update the admin password as soon as possible to prevent a possible security breach.
