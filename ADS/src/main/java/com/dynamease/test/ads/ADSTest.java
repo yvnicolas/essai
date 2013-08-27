@@ -1,5 +1,6 @@
 package com.dynamease.test.ads;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 import org.apache.directory.api.ldap.model.entry.Entry;
 import org.apache.directory.api.ldap.model.name.Dn;
 import org.apache.directory.api.ldap.model.schema.SchemaManager;
+import org.apache.directory.api.ldap.model.schema.registries.Schema;
 import org.apache.directory.api.ldap.schemamanager.impl.DefaultSchemaManager;
 import org.apache.directory.server.core.api.DirectoryService;
 import org.apache.directory.server.core.api.partition.Partition;
@@ -82,9 +84,8 @@ public class ADSTest {
 	 */
 	private SchemaManager initSchemaPartition() throws Exception {
 
-
 		SchemaManager schemaManager = new DefaultSchemaManager();
-		
+
 		service.setSchemaManager(schemaManager);
 
 		// Init the LdifPartition
@@ -200,54 +201,57 @@ public class ADSTest {
 
 		// Now we can create as many partitions as we need
 		// Create some new partitions named 'foo', 'bar' and 'apache'.
-		Partition fooPartition = addPartition("foo", new Dn("dc=foo,dc=com"), schemaManager);
-		Partition barPartition = addPartition("bar", new Dn("dc=bar,dc=com"), schemaManager);
-		Partition apachePartition = addPartition("apache", new Dn("dc=apache,dc=org"), schemaManager);
+		// Partition fooPartition = addPartition("foo", new Dn("dc=foo,dc=com"),
+		// schemaManager);
+		// Partition barPartition = addPartition("bar", new Dn("dc=bar,dc=com"),
+		// schemaManager);
+		Partition apachePartition = addPartition("dynamease", new Dn("dc=dynamease,dc=net"), schemaManager);
 
 		// Index some attributes on the apache partition
-		addIndex(apachePartition, "objectClass", "ou", "uid");
+		// addIndex(apachePartition, "objectClass", "ou", "uid");
 
 		// And start the service
 		service.startup();
 
 		// Inject the foo root entry if it does not already exist
-		try {
-			service.getAdminSession().lookup(fooPartition.getSuffixDn());
-		} catch (Exception lnnfe) {
-			Dn dnFoo = new Dn("dc=foo,dc=com");
-			Entry entryFoo = service.newEntry(dnFoo);
-			entryFoo.add("objectClass", "top", "domain", "extensibleObject");
-			entryFoo.add("dc", "foo");
-			service.getAdminSession().add(entryFoo);
-		}
+		// try {
+		// service.getAdminSession().lookup(fooPartition.getSuffixDn());
+		// } catch (Exception lnnfe) {
+		// Dn dnFoo = new Dn("dc=foo,dc=com");
+		// Entry entryFoo = service.newEntry(dnFoo);
+		// entryFoo.add("objectClass", "top", "domain", "extensibleObject");
+		// entryFoo.add("dc", "foo");
+		// service.getAdminSession().add(entryFoo);
+		// }
 
 		// Inject the bar root entry
-		try {
-			service.getAdminSession().lookup(barPartition.getSuffixDn());
-		} catch (Exception lnnfe) {
-			Dn dnBar = new Dn("dc=bar,dc=com");
-			Entry entryBar = service.newEntry(dnBar);
-			entryBar.add("objectClass", "top", "domain", "extensibleObject");
-			entryBar.add("dc", "bar");
-			service.getAdminSession().add(entryBar);
-		}
+		// try {
+		// service.getAdminSession().lookup(barPartition.getSuffixDn());
+		// } catch (Exception lnnfe) {
+		// Dn dnBar = new Dn("dc=bar,dc=com");
+		// Entry entryBar = service.newEntry(dnBar);
+		// entryBar.add("objectClass", "top", "domain", "extensibleObject");
+		// entryBar.add("dc", "bar");
+		// service.getAdminSession().add(entryBar);
+		// }
 
 		// Inject the apache root entry
 		if (!service.getAdminSession().exists(apachePartition.getSuffixDn())) {
-			Dn dnApache = new Dn("dc=Apache,dc=Org");
+			Dn dnApache = new Dn("dc=dynamease,dc=net");
 			Entry entryApache = service.newEntry(dnApache);
 			entryApache.add("objectClass", "top", "domain", "extensibleObject");
-			entryApache.add("dc", "Apache");
+			entryApache.add("dc", "dynamease");
 			service.getAdminSession().add(entryApache);
 		}
 
 	}
 
 	private void injectEntry(String dnAsString) throws Exception {
-		Dn dn = new Dn("o=" + dnAsString + ",dc=Apache,dc=Org");
+		Dn dn = new Dn("cn=" + dnAsString + ",dc=dynamease,dc=net");
 		Entry entrytoInject = service.newEntry(dn);
-		entrytoInject.add("objectClass", "top", "organization");
-		entrytoInject.add("o", dnAsString);
+		entrytoInject.add("objectClass", "top", "person");
+		entrytoInject.add("cn", dnAsString);
+		entrytoInject.add("sn", dnAsString);
 		service.getAdminSession().add(entrytoInject);
 	}
 
@@ -276,6 +280,19 @@ public class ADSTest {
 
 	}
 
+	/**
+	 * Loads an Ldif File
+	 * 
+	 * @throws IOException
+	 * 
+	 */
+	public void loadFile(String fileName) throws IOException {
+
+		Resource dirtest = new ClassPathResource(fileName);
+		LdifFileLoader fileLoader = new LdifFileLoader(service.getAdminSession(), dirtest.getFile().getAbsolutePath());
+		fileLoader.execute();
+
+	}
 
 	public static void main(String[] args) {
 		try {
@@ -284,7 +301,7 @@ public class ADSTest {
 			ADSTest ads = new ADSTest();
 
 			// Read an entry
-			Entry result = ads.service.getAdminSession().lookup(new Dn("dc=apache,dc=org"));
+			Entry result = ads.service.getAdminSession().lookup(new Dn("dc=dynamease,dc=net"));
 
 			// And print it if available
 			System.out.println("Found entry : " + result);
@@ -298,7 +315,7 @@ public class ADSTest {
 			String commande;
 
 			do {
-				System.out.print("Commande(start, stop, inject ou quit)    ?   ");
+				System.out.print("Commande(start, stop, inject, load ou quit)    ?   ");
 				commande = sc.nextLine();
 
 				switch (commande) {
@@ -306,16 +323,23 @@ public class ADSTest {
 					break;
 				case "start":
 					try {
-						ads.server.start();
-						System.out.println("Serveur demarre");
-
-						
-						
+			
 						Resource ldif = new ClassPathResource("dynSchemeV1.1.ldif");
 						LdifFileLoader fileLoader = new LdifFileLoader(ads.service.getAdminSession(), ldif.getFile().getAbsolutePath());
-						fileLoader.execute();
+						int entrycount = fileLoader.execute();
 						
-						
+						ads.server.start();
+						System.out.println(String.format("%s entrées chargees, Serveur demarre", entrycount));
+						System.out.println("Liste des schémas enables");
+						for (Schema s : ads.service.getSchemaManager().getEnabled()) {
+							System.out.println(s.getSchemaName());
+						}
+						System.out.println("Liste des schémas disables");
+						for (Schema s : ads.service.getSchemaManager().getDisabled()) {
+							System.out.println(s.getSchemaName());
+						}
+
+
 					} catch (Exception e) {
 						System.out.println("Le serveur ne peut pas demarrer");
 						e.printStackTrace();
@@ -330,8 +354,19 @@ public class ADSTest {
 						e.printStackTrace();
 					}
 					break;
+				case "load":
+					System.out.println("Fichier Ldif a charger");
+					String file = sc.nextLine();
+					try {
+						ads.loadFile(file);
+						System.out.println("Fichier charge");
+					} catch (Exception e) {
+						System.out.println("ca merde");
+						e.printStackTrace();
+					}
+					break;
 				case "inject":
-					System.out.println("Entree � ajouter");
+					System.out.println("Entree � ajouter");
 					String dn = sc.nextLine();
 					try {
 						ads.injectEntry(dn);

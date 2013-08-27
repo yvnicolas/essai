@@ -1,0 +1,20 @@
+version: 1
+
+dn: cn=Yves Nicolas+uid=123456,dc=dynamease,dc=net
+objectClass: top
+objectClass: person
+objectClass: dynSubscriber
+cn: Yves Nicolas
+sn: Nicolas
+givenName: Yves
+uid: 123456
+
+dn: cn=Antoine Veuiller+uid=123457,dc=dynamease,dc=net
+objectClass: top
+objectClass: person
+objectClass: dynSubscriber
+cn: Antoine Veuiller
+sn: Veuiller
+givenName: Antoine
+uid: 123457
+

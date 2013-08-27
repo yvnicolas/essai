@@ -1,0 +1,11 @@
+
+dn: cn=Yves Nicolas,cn=Antoine Veuiller+uid=123457,dc=dynamease,dc=net
+objectclass: top
+objectclass: inetOrgPerson
+objectclass: person
+objectclass: organizationalPerson
+objectclass: dynContact
+cn: Yves Nicolas
+sn: Nicolas
+givenName: Yves
+dynCategory: PROFESSIONAL

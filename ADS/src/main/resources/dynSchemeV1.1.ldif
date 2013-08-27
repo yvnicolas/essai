@@ -114,8 +114,8 @@ m-oid: 1.3.6.1.4.1.18060.5.1.2
 m-name: dynContact
 m-description: A contact stored in a DynSubscriber subtree
 m-supObjectClass: inetOrgPerson
-m-may: DynCategory
-m-may: DynAddressBook
+m-may: dynCategory
+m-may: dynAddressBook
 
 dn: m-oid=1.3.6.1.4.1.18060.5.1.4, ou=objectclasses, cn=dynScheme, ou=schema
 objectclass: metaObjectClass
