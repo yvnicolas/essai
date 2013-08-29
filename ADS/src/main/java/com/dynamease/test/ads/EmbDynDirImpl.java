@@ -56,9 +56,9 @@ public class EmbDynDirImpl implements EmbDynDir {
 		// Initialize the LDAP service
 		factory.init(INSTANCENAME);
 		service = factory.getDirectoryService();
-//		Dn partitionDn = new Dn(PARTITIONDN);
-//
-//		// first load the schema
+		Dn partitionDn = new Dn(PARTITIONDN);
+
+		// first load the schema
 		SchemaManager schemaManager = new DefaultSchemaManager();
 		service.setSchemaManager(schemaManager);
 
@@ -66,11 +66,11 @@ public class EmbDynDirImpl implements EmbDynDir {
 		service.getChangeLog().setEnabled(false);
 		service.setDenormalizeOpAttrsEnabled(true);
 //
-//		// Creating the Dynamease Partition
-//		AvlPartition partition = new AvlPartition(schemaManager);
-//		partition.setId(PARTITIONID);
-//		partition.setSuffixDn(partitionDn);
-//		service.addPartition(partition);
+		// Creating the Dynamease Partition
+		AvlPartition partition = new AvlPartition(schemaManager);
+		partition.setId(PARTITIONID);
+		partition.setSuffixDn(partitionDn);
+		service.addPartition(partition);
 
 		// And start the service
 		service.startup();

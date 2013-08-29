@@ -76,7 +76,7 @@ public class ADSTest {
 		// We have to load the schema now, otherwise we won't be able
 		// to initialize the Partitions, as we won't be able to parse
 		// and normalize their suffix DN
-		schemaManager.loadAllEnabled();
+//		schemaManager.loadAllEnabled();
 
 		schemaPartition.setSchemaManager(schemaManager);
 
@@ -106,12 +106,17 @@ public class ADSTest {
 		service = factory.getDirectoryService();
 
 		// first load the schema
-		SchemaManager schemaManager = initSchemaPartition();
-		service.setSchemaManager(schemaManager);
+//		SchemaManager schemaManager = initSchemaPartition();
+//		service.setSchemaManager(schemaManager);
 
 		// Disable the ChangeLog system
 		service.getChangeLog().setEnabled(false);
 		service.setDenormalizeOpAttrsEnabled(true);
+		
+		Resource ldif = new ClassPathResource("dynSchemeV1.1.ldif");
+		LdifFileLoader fileLoader = new LdifFileLoader(service.getAdminSession(), ldif.getFile().getAbsolutePath());
+		fileLoader.execute();
+
 
 		// Now we can create as many partitions as we need
 		// Create some new partitions named 'foo', 'bar' and 'apache'.
@@ -119,7 +124,7 @@ public class ADSTest {
 		// schemaManager);
 		// Partition barPartition = addPartition("bar", new Dn("dc=bar,dc=com"),
 		// schemaManager);
-		Partition apachePartition = addPartition("dynamease", new Dn("dc=dynamease,dc=net"), schemaManager);
+		Partition apachePartition = addPartition("dynamease", new Dn("dc=dynamease,dc=net"), service.getSchemaManager());
 
 		// And start the service
 		service.startup();
