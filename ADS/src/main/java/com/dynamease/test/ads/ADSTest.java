@@ -1,17 +1,14 @@
 package com.dynamease.test.ads;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Scanner;
 
 import org.apache.directory.api.ldap.model.entry.Entry;
 import org.apache.directory.api.ldap.model.name.Dn;
 import org.apache.directory.api.ldap.model.schema.SchemaManager;
 import org.apache.directory.api.ldap.model.schema.registries.Schema;
-import org.apache.directory.api.ldap.schemamanager.impl.DefaultSchemaManager;
 import org.apache.directory.server.core.api.DirectoryService;
 import org.apache.directory.server.core.api.partition.Partition;
-import org.apache.directory.server.core.api.schema.SchemaPartition;
 import org.apache.directory.server.core.factory.DefaultDirectoryServiceFactory;
 import org.apache.directory.server.core.partition.impl.avl.AvlPartition;
 import org.apache.directory.server.ldap.LdapServer;
@@ -59,35 +56,35 @@ public class ADSTest {
 	 * @throws Exception
 	 *             if the schema LDIF files are not found on the classpath
 	 */
-	private SchemaManager initSchemaPartition() throws Exception {
-
-		SchemaManager schemaManager = new DefaultSchemaManager();
-		service.setSchemaManager(schemaManager);
-
-		Resource ldif = new ClassPathResource("dynSchemeV1.1.ldif");
-		LdifFileLoader fileLoader = new LdifFileLoader(service.getAdminSession(), ldif.getFile().getAbsolutePath());
-		fileLoader.execute();
-	
-		// Init the Partition
-		AvlPartition partition = new AvlPartition(schemaManager);
-		SchemaPartition schemaPartition = new SchemaPartition(schemaManager);
-		schemaPartition.setWrappedPartition(partition);
-
-		// We have to load the schema now, otherwise we won't be able
-		// to initialize the Partitions, as we won't be able to parse
-		// and normalize their suffix DN
-//		schemaManager.loadAllEnabled();
-
-		schemaPartition.setSchemaManager(schemaManager);
-
-		List<Throwable> errors = schemaManager.getErrors();
-
-		if (errors.size() != 0) {
-			throw new Exception("Schema load failed : " + errors);
-		}
-
-		return schemaManager;
-	}
+//	private SchemaManager initSchemaPartition() throws Exception {
+//
+//		SchemaManager schemaManager = new DefaultSchemaManager();
+//		service.setSchemaManager(schemaManager);
+//
+//		Resource ldif = new ClassPathResource("dynSchemeV1.1.ldif");
+//		LdifFileLoader fileLoader = new LdifFileLoader(service.getAdminSession(), ldif.getFile().getAbsolutePath());
+//		fileLoader.execute();
+//	
+//		// Init the Partition
+//		AvlPartition partition = new AvlPartition(schemaManager);
+//		SchemaPartition schemaPartition = new SchemaPartition(schemaManager);
+//		schemaPartition.setWrappedPartition(partition);
+//
+//		// We have to load the schema now, otherwise we won't be able
+//		// to initialize the Partitions, as we won't be able to parse
+//		// and normalize their suffix DN
+////		schemaManager.loadAllEnabled();
+//
+//		schemaPartition.setSchemaManager(schemaManager);
+//
+//		List<Throwable> errors = schemaManager.getErrors();
+//
+//		if (errors.size() != 0) {
+//			throw new Exception("Schema load failed : " + errors);
+//		}
+//
+//		return schemaManager;
+//	}
 
 	/**
 	 * Initialize the server. It creates the partition, adds the index, and
@@ -139,7 +136,7 @@ public class ADSTest {
 			service.getAdminSession().add(entryApache);
 		}
 		
-		service.setAllowAnonymousAccess(true);
+//		service.setAllowAnonymousAccess(true);
 
 	}
 
