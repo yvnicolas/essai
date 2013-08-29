@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Application strings -->
+
+    <string name="app_name">DynDemoApp</string>
+
+    <!-- ShareTool Choosers -->
+
+    <string name="export_application_chooser">Share the application with:</string>
+    <string name="export_profile_chooser">Share the profile with:</string>
+
+    <!-- AlertDialog commons -->
+
+    <string name="alert_dialog_title_warning">Warning:</string>
+    <string name="alert_dialog_title_error">An error occurred:</string>
+    <string name="alert_dialog_title_info">Information:</string>
+
+    <!-- ShareTool intents messages -->
+    <string name="send_app_download_proposal_title">Donwload link for the Dynamease application</string>
+    <string name="send_app_download_proposal_text">You can download the application here: %1$s</string>
+    <string name="send_visit_card_title">A new Dynamease visit card from %1$s</string>
+    <string name="send_visit_card_app_download_proposal">\n\n------- If you can\'t open the attachment, you can download the application here: %1$s</string>
+    
+    
+    <!-- Common Feedbacks -->
+    <string name="name_misunderstood">Enter a valid couple \'firstname lastname\'.</string>
+    <string name="cannot_contact_server">Sorry %1$s, there was an error while contacting the server.</string>
+    
+</resources>
