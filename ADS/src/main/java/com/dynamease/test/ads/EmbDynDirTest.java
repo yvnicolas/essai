@@ -7,7 +7,7 @@ public class EmbDynDirTest {
 	/**
 	 * @param args
 	 */
-	public static void mainEmb() {
+	public static void main(String[] args) {
 		
 		EmbDynDirImpl eds = new EmbDynDirImpl();
 		

@@ -37,6 +37,13 @@ public class EmbDynDirImpl implements EmbDynDir {
 
 	/** The LDAP server */
 	private LdapServer server;
+	
+	
+
+	public EmbDynDirImpl() {
+		super();
+
+	}
 
 	/*
 	 * (non-Javadoc)
@@ -49,43 +56,52 @@ public class EmbDynDirImpl implements EmbDynDir {
 		// Initialize the LDAP service
 		factory.init(INSTANCENAME);
 		service = factory.getDirectoryService();
-		Dn partitionDn = new Dn(PARTITIONDN);
-
-		// first load the schema
+//		Dn partitionDn = new Dn(PARTITIONDN);
+//
+//		// first load the schema
 		SchemaManager schemaManager = new DefaultSchemaManager();
+		service.setSchemaManager(schemaManager);
 
 		// Disable the ChangeLog system
 		service.getChangeLog().setEnabled(false);
 		service.setDenormalizeOpAttrsEnabled(true);
-
-		// Creating the Dynamease Partition
-		AvlPartition partition = new AvlPartition(schemaManager);
-		partition.setId(PARTITIONID);
-		partition.setSuffixDn(partitionDn);
-		service.addPartition(partition);
+//
+//		// Creating the Dynamease Partition
+//		AvlPartition partition = new AvlPartition(schemaManager);
+//		partition.setId(PARTITIONID);
+//		partition.setSuffixDn(partitionDn);
+//		service.addPartition(partition);
 
 		// And start the service
 		service.startup();
-
-		// Inject the dynamease root entry
-		if (!service.getAdminSession().exists(partition.getSuffixDn())) {
-			Entry rootEntry = service.newEntry(partitionDn);
-			rootEntry.add("objectClass", "top", "domain", "extensibleObject");
-			rootEntry.add("dc", PARTITIONID);
-			service.getAdminSession().add(rootEntry);
-		}
-
-		// Loads the Dynamease Ldap Schema
-
-		Resource ldif = new ClassPathResource(LDIFSCHEMEFILE);
-		LdifFileLoader fileLoader = new LdifFileLoader(service.getAdminSession(), ldif.getFile().getAbsolutePath());
-		fileLoader.execute();
+		
+	
+//		// Inject the dynamease root entry
+//		if (!service.getAdminSession().exists(partition.getSuffixDn())) {
+//			Entry rootEntry = service.newEntry(partitionDn);
+//			rootEntry.add("objectClass", "top", "domain", "extensibleObject");
+//			rootEntry.add("dc", PARTITIONID);
+//			service.getAdminSession().add(rootEntry);
+//			printinfo(service);
+//		}
+//
+//		// Loads the Dynamease Ldap Schema
+//
+//		Resource ldif = new ClassPathResource(LDIFSCHEMEFILE);
+//		LdifFileLoader fileLoader = new LdifFileLoader(service.getAdminSession(), ldif.getFile().getAbsolutePath());
+//		fileLoader.execute();
 
 		// Starts the ldap server
 		server = new LdapServer();
 		server.setTransports(new TcpTransport(serverPort));
 		server.setDirectoryService(service);
 
+	}
+
+	private void printinfo(DirectoryService serv) {
+		System.out.println(String.format("Infos sur le service %s", serv.getInstanceId()));
+		System.out.println(String.format("Access Enabled : %s", serv.isAccessControlEnabled()));
+		
 	}
 
 	/*
