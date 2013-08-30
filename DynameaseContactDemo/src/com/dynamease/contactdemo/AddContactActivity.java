@@ -36,12 +36,23 @@ public class AddContactActivity extends Activity {
 			System.out.println(rawContactUri + " " + acc.name);
 			long rawContactId = ContentUris.parseId(rawContactUri);
 
+			// Determine name of the contact
+			String contactFullName = ((EditText) findViewById(R.id.edit_contactname)).getText().toString();
+			String contactFirstName = "";
+			String contactLastName = "";
+			try {
+				String[] contactNames = contactFullName.split(" ", 2);
+				contactFirstName = contactNames[0];
+				contactLastName = contactNames[1];
+			} catch (ArrayIndexOutOfBoundsException e) {
+				e.printStackTrace();
+			}
+			
 			// Set the name of the contact
-			String contactName = ((EditText)findViewById(R.id.edit_contactname)).getText().toString();
 			values.clear();
 			values.put(Data.RAW_CONTACT_ID, rawContactId);
 			values.put(Data.MIMETYPE, StructuredName.CONTENT_ITEM_TYPE);
-			values.put(StructuredName.DISPLAY_NAME, contactName);
+			values.put(StructuredName.DISPLAY_NAME, contactFullName);
 			getContentResolver().insert(Data.CONTENT_URI, values);
 
 			// Add Dynamease contact proposition to the contact.
@@ -49,7 +60,9 @@ public class AddContactActivity extends Activity {
 			values.put(Data.RAW_CONTACT_ID, rawContactId);
 			values.put(Data.MIMETYPE, "vnd.android.cursor.item/vnd.dynamease.profile");
 			values.put(Data.DATA3, "Contacter avec Dynamease.");
-			values.put(Data.DATA2, "Summary");
+			values.put(Data.DATA2, "42");
+			values.put(Data.DATA4, contactFirstName);
+			values.put(Data.DATA5, contactLastName);
 			getContentResolver().insert(Data.CONTENT_URI, values);
 		}
 	}
