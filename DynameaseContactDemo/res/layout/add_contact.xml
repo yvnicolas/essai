@@ -16,6 +16,15 @@
         <requestFocus />
     </EditText>
 
+    <EditText
+        android:id="@+id/edit_contactid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Contact ID"
+        android:inputType="number"
+        android:text="42" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
