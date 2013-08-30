@@ -47,7 +47,7 @@ public class AddContactActivity extends Activity {
 			} catch (ArrayIndexOutOfBoundsException e) {
 				e.printStackTrace();
 			}
-			
+			int contactId = 42;
 			// Set the name of the contact
 			values.clear();
 			values.put(Data.RAW_CONTACT_ID, rawContactId);
@@ -55,14 +55,14 @@ public class AddContactActivity extends Activity {
 			values.put(StructuredName.DISPLAY_NAME, contactFullName);
 			getContentResolver().insert(Data.CONTENT_URI, values);
 
-			// Add Dynamease contact proposition to the contact.
+			// Add Dynamease contact proposition a info to the contact.
 			values.clear();
 			values.put(Data.RAW_CONTACT_ID, rawContactId);
 			values.put(Data.MIMETYPE, "vnd.android.cursor.item/vnd.dynamease.profile");
 			values.put(Data.DATA3, "Contacter avec Dynamease.");
-			values.put(Data.DATA2, "42");
-			values.put(Data.DATA4, contactFirstName);
-			values.put(Data.DATA5, contactLastName);
+			values.put(Constants.ID_COL_NAME, contactId);
+			values.put(Constants.FIRSTNAME_COL_NAME, contactFirstName);
+			values.put(Constants.LASTNAME_COL_NAME, contactLastName);
 			getContentResolver().insert(Data.CONTENT_URI, values);
 		}
 	}
