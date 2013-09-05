@@ -14,7 +14,7 @@ import com.dynamease.entity.DynCategories;
 import com.dynamease.entity.DynPerson;
 import com.dynamease.entity.DynSubscriber;
 
-//Todo : for the moment, supposes the connection has been
+//Todo : for the moment, supposes the connection has been established
 
 public class DynLinkedInAddrBook extends DynExternalAddressBookImpl {
 
