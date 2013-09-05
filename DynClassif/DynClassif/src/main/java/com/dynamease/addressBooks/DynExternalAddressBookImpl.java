@@ -14,6 +14,8 @@ public abstract class DynExternalAddressBookImpl implements DynExternalAddressBo
 	@Override
 	public DynCatRatedPerson next(DynSubscriber sub) {
 		
+		//TODO : rajouter ici les traitements pre et post sur les données genre famille...
+		
 		DynCatRatedPerson toReturn = new DynCatRatedPerson(this.getNextEntry());
 		for (DynCategories cat : DynCategories.values()) {
 			toReturn.setRate(cat, this.rateCurrent(cat, sub));
