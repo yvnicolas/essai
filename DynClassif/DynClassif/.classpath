@@ -164,6 +164,11 @@
 			<attribute name="javadoc_location" value="jar:file:/home/yves/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.2.2/jackson-core-2.2.2-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="var" path="M2_REPO/net/sf/supercsv/super-csv/2.1.0/super-csv-2.1.0.jar" sourcepath="M2_REPO/net/sf/supercsv/super-csv/2.1.0/super-csv-2.1.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/home/yves/.m2/repository/net/sf/supercsv/super-csv/2.1.0/super-csv-2.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/autoPA"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

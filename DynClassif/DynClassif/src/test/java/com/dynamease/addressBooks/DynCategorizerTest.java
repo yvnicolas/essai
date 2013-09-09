@@ -60,7 +60,7 @@ public class DynCategorizerTest {
 		when(addrBookMock.hasNext())
 			.thenReturn(true)
 			.thenReturn(false);
-		when(addrBookMock.next()).thenReturn(contact);
+		when(addrBookMock.next(any(DynSubscriber.class))).thenReturn(contact);
 
 	}
 

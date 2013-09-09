@@ -48,7 +48,7 @@ public class DynCategorizer {
 
 		// Main loop on each contact in the address book
 		while (addrBook.hasNext()) {
-			DynCatRatedPerson catContact = addrBook.next();
+			DynCatRatedPerson catContact = addrBook.next(subscriber);
 			DynContact toBeAdded;
 
 			// Get potential match in Directory or create the new contact.

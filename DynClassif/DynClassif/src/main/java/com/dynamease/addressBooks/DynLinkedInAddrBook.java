@@ -25,11 +25,8 @@ public class DynLinkedInAddrBook extends DynExternalAddressBookImpl {
 	private Iterator<LinkedInProfile> cursor = connections.iterator();
 	private LinkedInProfile currentConnection = null;
 
-	@Override
-	public void remove() {
-		// TODO Auto-generated method stub
 
-	}
+
 
 	@Override
 	public boolean hasNext() {
@@ -77,10 +74,6 @@ public class DynLinkedInAddrBook extends DynExternalAddressBookImpl {
 		return new HashSet<String>();
 	}
 
-	@Override
-	public DynCatRatedPerson next() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 }

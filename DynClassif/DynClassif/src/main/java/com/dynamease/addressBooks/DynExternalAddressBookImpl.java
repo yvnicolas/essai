@@ -8,7 +8,6 @@ import com.dynamease.entity.DynSubscriber;
 
 public abstract class DynExternalAddressBookImpl implements DynExternalAddressBook {
 
-	@Override
 	public abstract boolean hasNext();
 
 	@Override
@@ -22,12 +21,7 @@ public abstract class DynExternalAddressBookImpl implements DynExternalAddressBo
 		}
 		return toReturn;
 	}
-//
-//	@Override
-//	public void remove() {
-//		// TODO Auto-generated method stub
-//
-//	}
+
 
 	@Override
 	public abstract Set<String> retreiveCategories();
