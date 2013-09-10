@@ -1,7 +1,9 @@
 package com.dynamease.addressBooks;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -23,10 +25,9 @@ import com.dynamease.entity.DynSubscriber;
 
 public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 
-	private static final String CATSEP = "[:;]";
+	private static final String CATSEP = "[:;*]";
 
 	private Logger logger = LoggerFactory.getLogger(DynCSVAddrBook.class);
-
 
 	private List<DynCSVContact> dynCSVContacts;
 
@@ -40,14 +41,14 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 	 * 
 	 * @param linkToFile
 	 */
-	public DynCSVAddrBook(Reader linkToFile) {
+	public DynCSVAddrBook(File linkToFile) {
 		super();
 		initCsvAddrBook(linkToFile);
 	}
 
-	// FIXME : still to be checked : le comportement des reader est bizarre ne
-	// fonctionne pas avec un inputStream en parametre
-	private void initCsvAddrBook(Reader linkToFile) {
+	// Attention : this code does not work with InputStream Reader (SuperCSV
+	// problem)
+	private void initCsvAddrBook(File linkToFile) {
 
 		categories = new HashSet<String>();
 
@@ -58,15 +59,18 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 		// read a variable number of columns in the first line (see
 		// http://supercsv.sourceforge.net/readers.html)
 		CsvListReader listReader = null;
+		FileReader file = null;
+		BufferedReader b = null;
 		try {
-			listReader = new CsvListReader(linkToFile,
-					CsvPreference.STANDARD_PREFERENCE);
+			file = new FileReader(linkToFile);
+			b = new BufferedReader(file);
+			listReader = new CsvListReader(b, CsvPreference.STANDARD_PREFERENCE);
 			csvHeader = listReader.getHeader(true);
 		} catch (IOException e) {
 			logger.info("Did not manage to get the Csv Header", e);
 			try {
 				listReader.close();
-				linkToFile.close();
+				file.close();
 			} catch (IOException e1) {
 				logger.info("Problem trying to close the readers", e1);
 				return;
@@ -96,13 +100,12 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 		// columns
 		// A CsvBeanReader object is the choice to extract easier to POJO
 		// structure
-		// The linkToFile Reader object progressed one row when reading the
-		// header so beanReader will start from line 2.
 		CsvBeanReader beanReader = null;
 
 		try {
-			beanReader = new CsvBeanReader(linkToFile,
-					CsvPreference.STANDARD_PREFERENCE);
+			file = new FileReader(linkToFile);
+			b = new BufferedReader(file);
+			beanReader = new CsvBeanReader(b, CsvPreference.STANDARD_PREFERENCE);
 			// beanReader starts reading from line 2 (see above)
 			// it is as if we would be reading a file without a header
 			beanReader.getHeader(false);
@@ -114,7 +117,7 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 			try {
 				beanReader.close();
 				listReader.close();
-				linkToFile.close();
+				file.close();
 			} catch (IOException e1) {
 				logger.info("Problem trying to close the readers", e1);
 			}
@@ -126,7 +129,7 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 		try {
 			listReader.close();
 			beanReader.close();
-			linkToFile.close();
+			file.close();
 
 		} catch (IOException e) {
 			logger.info("Problem trying to close the readers", e);
@@ -199,7 +202,6 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 					processors)) != null) {
 				extractCategories(contact.getCategories());
 				contacts.add(contact);
-				logger.debug(contact.toString());
 			}
 		} catch (IOException e) {
 			logger.info("There seems to be a trouble with the file.", e);
@@ -209,9 +211,16 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 
 	private void extractCategories(String catStringList) {
 
+		// Categories might be found in a single column separated
+		// Extract the individual categorie namses
 		String[] catSepares = catStringList.split(CATSEP);
 		for (String cat : catSepares) {
-			categories.add(cat);
+			// Remove Starting and ending white spaces
+			cat = cat.replaceAll("^\\s", "");
+			cat = cat.replaceAll("\\s$", "");
+			if (!cat.equals("")) {
+				categories.add(cat);
+			}
 		}
 
 	}
