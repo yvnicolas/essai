@@ -31,7 +31,7 @@ public class DynCSVAddrBookTest {
 	@Test
 	public void testDynCSVAddrBook() throws IOException {
 
-		File is = new File("src/main/resource/SimpleMockCSVCiel.csv");
+		File is = new File("src/main/resources/SimpleMockCSVCiel.csv");
 		underTest = new DynCSVAddrBook(is);
 		assertNotNull(underTest);
 	}
@@ -39,7 +39,7 @@ public class DynCSVAddrBookTest {
 	@Test
 	public void testNext() throws IOException {
 
-		File is = new File("src/main/resource/SimpleMockCSVCiel.csv");
+		File is = new File("src/main/resources/SimpleMockCSVCiel.csv");
 		underTest = new DynCSVAddrBook(is);
 		assertTrue(underTest.hasNext());
 	}
@@ -47,14 +47,14 @@ public class DynCSVAddrBookTest {
 	@Test
 	public void testNext2() throws IOException {
 
-		File is = new File("src/main/resource/NoContact.csv");
+		File is = new File("src/main/resources/NoContact.csv");
 		underTest = new DynCSVAddrBook(is);
 		assertFalse(underTest.hasNext());
 	}
 
 	@Test
 	public void testIteration() {
-		File is = new File("src/main/resource/SimpleMockCSVCiel.csv");
+		File is = new File("src/main/resources/SimpleMockCSVCiel.csv");
 		underTest = new DynCSVAddrBook(is);
 		int compteur = 0;
 		DynPerson current;
@@ -71,7 +71,7 @@ public class DynCSVAddrBookTest {
 
 	@Test
 	public void testListCat() {
-		File is = new File("src/main/resource/googlecontactsboulot.csv");
+		File is = new File("src/main/resources/googlecontactsboulot.csv");
 		underTest = new DynCSVAddrBook(is);
 		Set<String> categories = underTest.retreiveCategories();
 		for (String cat : categories) {
@@ -84,7 +84,7 @@ public class DynCSVAddrBookTest {
 	@Test
 	public void testRating() {
 		DynSubscriber subYni = new DynSubscriber("Yves", "Nicolas");
-		File is = new File("src/main/resource/forCheckingRates.csv");
+		File is = new File("src/main/resources/forCheckingRates.csv");
 		underTest = new DynCSVAddrBook(is);
 
 		// First contact should not match any categories

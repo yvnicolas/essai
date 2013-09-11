@@ -22,7 +22,6 @@ import org.supercsv.io.CsvListReader;
 import org.supercsv.io.ICsvBeanReader;
 import org.supercsv.prefs.CsvPreference;
 
-import com.dynamease.entity.DynCSVContact;
 import com.dynamease.entity.DynCategories;
 import com.dynamease.entity.DynPerson;
 import com.dynamease.entity.DynSubscriber;
@@ -33,6 +32,7 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 
 	private Logger logger = LoggerFactory.getLogger(DynCSVAddrBook.class);
 
+	
 	private List<DynCSVContact> dynCSVContacts;
 
 	private int currentIndex;

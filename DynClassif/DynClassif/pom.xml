@@ -55,12 +55,11 @@
 		</dependency>
 
 		<!-- Auto PA Dynamease -->
-<!-- 		TODO : commenté car autoPA genere un War pour l'instant  -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.dynamease</groupId> -->
-<!-- 			<artifactId>autoPA</artifactId> -->
-<!-- 			<version>1.20-SNAPSHOT</version> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>com.dynamease</groupId>
+			<artifactId>dynamease-core</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
 
 		<!-- Spring Modules -->
 		<dependency>
