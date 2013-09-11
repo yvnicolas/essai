@@ -1,9 +1,13 @@
 package com.dynamease.addressBooks;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -59,18 +63,15 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 		// read a variable number of columns in the first line (see
 		// http://supercsv.sourceforge.net/readers.html)
 		CsvListReader listReader = null;
-		FileReader file = null;
-		BufferedReader b = null;
+		InputStreamReader b = null;
 		try {
-			file = new FileReader(linkToFile);
-			b = new BufferedReader(file);
+			b = new InputStreamReader(new BufferedInputStream(new FileInputStream(linkToFile)));
 			listReader = new CsvListReader(b, CsvPreference.STANDARD_PREFERENCE);
 			csvHeader = listReader.getHeader(true);
 		} catch (IOException e) {
 			logger.info("Did not manage to get the Csv Header", e);
 			try {
 				listReader.close();
-				file.close();
 			} catch (IOException e1) {
 				logger.info("Problem trying to close the readers", e1);
 				return;
@@ -103,8 +104,7 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 		CsvBeanReader beanReader = null;
 
 		try {
-			file = new FileReader(linkToFile);
-			b = new BufferedReader(file);
+			b = new InputStreamReader(new BufferedInputStream(new FileInputStream(linkToFile)));
 			beanReader = new CsvBeanReader(b, CsvPreference.STANDARD_PREFERENCE);
 			// beanReader starts reading from line 2 (see above)
 			// it is as if we would be reading a file without a header
@@ -116,8 +116,6 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 			logger.info("Did not manage to get a working CsvBeanReader.", e);
 			try {
 				beanReader.close();
-				listReader.close();
-				file.close();
 			} catch (IOException e1) {
 				logger.info("Problem trying to close the readers", e1);
 			}
@@ -127,9 +125,7 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 		currentIndex = 0;
 
 		try {
-			listReader.close();
 			beanReader.close();
-			file.close();
 
 		} catch (IOException e) {
 			logger.info("Problem trying to close the readers", e);
@@ -201,6 +197,7 @@ public class DynCSVAddrBook extends DynExternalAddressBookImpl {
 			while ((contact = beanReader.read(DynCSVContact.class, csvHeader,
 					processors)) != null) {
 				extractCategories(contact.getCategories());
+				logger.info(String.format("Contact : %s %s", contact.getFirstName(), contact.getLastName()));
 				contacts.add(contact);
 			}
 		} catch (IOException e) {

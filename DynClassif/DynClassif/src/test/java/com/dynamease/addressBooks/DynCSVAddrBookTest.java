@@ -18,8 +18,6 @@ import com.dynamease.entity.DynCategories;
 import com.dynamease.entity.DynPerson;
 import com.dynamease.entity.DynSubscriber;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = { "file:src/main/applicationContext.xml" })
 public class DynCSVAddrBookTest {
 
 	private Logger logger = LoggerFactory.getLogger(DynCSVAddrBook.class);
